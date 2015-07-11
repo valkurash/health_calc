@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js no-ipad" data-ng-app="healthCalc" data-ng-controller="RootController">
+<!--<![endif]-->
+<head>
+	<title>Health_Calc</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+	<meta name="viewport" content="width=device-width" />
+	@Styles.Render("~/Content/bootstrap")
+	@Styles.Render("~/Content/existingCss")
+	@Styles.Render("~/Content/themes/base/css")
+	@Styles.Render("~/Content/css")
+	@Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+	<div class="wrap">
+		<div class="layout">
+			<header class="header">
+				<div class="header__left">
+					<div class="menu">
+						<div class="menu__handler" data-ga-category="header" data-ga-action="mainmenubutton" data-ga-ltype="onsite">
+							<div class="menu__brick">
+								<div class="menu__brick-item"></div>
+								<div class="menu__brick-item"></div>
+								<div class="menu__brick-item"></div>
+							</div>
+						</div>
+					</div>
+
+					<a class="logo" href="/"><img src="/img/logo.png" /></a>
+
+					<div class="clear"></div>
+				</div>
+				<div class="header__right">
+					<div class="header__contact">
+						<div class="header__phone header__phone_link _call-header-popup ya-phone call_phone_1" data-ga-category="header" data-ga-action="phoneclick" data-ga-ltype="onsite">8 800 755-80-00</div>
+					</div>
+					<a class="yellow-btn yellow-btn__header-buy" data-ga-category="header" data-ga-action="buybutton" data-ga-ltype="onsite" ng-click="toggleGeneralPopup(true)" scroll-on-click>Купить полис</a>
+					<a href="#" data-ga-category="header" data-ga-action="signinbutton" data-ga-ltype="onsite" class="login _with-icon _call-header-popup"></a>
+				</div>
+				<div class="clear"></div>
+			</header>
+			@RenderBody()
+		</div>
+		<div class="footer">
+			<footer class="footer">
+				<div class="footer__inner">
+					<div class="footer__wrap">
+						<div class="footer__left">
+							<div class="footer__contact">
+								<span class="footer__contact-text">Остались вопросы? Звоните!</span>
+								<span class="footer__contact-phone"><div class="ya-phone call_phone_2">8 800 755 80 00</div></span>
+								<a href="#" class="cta cta_feedback cta_feedback" data-ga-category="footer" data-ga-action="feedbackbutton" data-ga-link-type="onsite">Обратная связь</a>
+								<a href="/" class="switch-mobile" style="visibility: hidden;">Перейти на мобильную версию</a>
+								<a href="https://www.tcsbank.ru/" target="_blank" class="switch-site" data-ga-category="header" data-ga-action="signoutbutton" data-ga-ltype="outbound">Переход на сайт банка<br>Тинькофф Кредитные Системы</a>
+							</div>
+						</div>
+						<div class="footer__right">
+							<ul class="footer__menu">
+								<li class="footer__menu-item footer__menu-item_title">Информационный центр</li>
+								<li class="footer__menu-item"><a href="/news" class="footer__menu-link" data-ga-category="footer" data-ga-action="news" data-ga-link-type="onsite">Новости</a></li>
+								<li class="footer__menu-item"><a href="/about" class="footer__menu-link" data-ga-category="footer" data-ga-action="about" data-ga-link-type="onsite">О компании</a></li>
+								<li class="footer__menu-item"><a href="/faq" class="footer__menu-link" data-ga-category="footer" data-ga-action="questions" data-ga-link-type="onsite">Вопросы и ответы</a></li>
+								<li class="footer__menu-item"><a href="#" class="footer__menu-link footer__menu-link_insured-event" data-ga-category="footer" data-ga-action="accident" data-ga-link-type="onsite">Произошел страховой случай</a></li>
+							</ul>
+							<ul class="footer__menu">
+								<li class="footer__menu-item footer__menu-item_title">Страховые продукты</li>
+								<li class="footer__menu-item"><a href="/avtostrahovanie" class="footer__menu-link" data-ga-category="footer" data-ga-action="transportinsurance" data-ga-link-type="onsite">Страхование транспорта</a></li>
+								<li class="footer__menu-item"><a href="/strahovanie-puteshestvennikov" class="footer__menu-link" data-ga-category="footer" data-ga-action="travelers" data-ga-link-type="onsite">Для путешественников</a></li>
+								<li class="footer__menu-item"><a href="/strahovanie-kvartiry" class="footer__menu-link" data-ga-category="footer" data-ga-action="apartments" data-ga-link-type="onsite">Квартиры и дачи</a></li>
+								<li class="footer__menu-item"><a href="/strahovanie-zhizni" class="footer__menu-link" data-ga-category="footer" data-ga-action="accidents" data-ga-link-type="onsite">Несчастные случаи и болезни</a></li>
+								<li class="footer__menu-item footer__menu-item_page-link"><a class="footer__info-link _with-icon footer__info-link_page" href="/~/media/Files/saveinfo.ashx" target="_blank" data-ga-category="" data-ga-action="" data-ga-ltype="">Защита информации</a></li>
+							</ul>
+							<div class="clear"></div>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="footer__info">
+						<div class="footer__wrap">
+							<div class="footer__left">
+								<div class="footer-links-header">ПОДПИШИТЕСЬ НА НОВОСТИ</div>
+								<noindex>
+									<ul class="social social_colorful">
+										<li class="social__item"><a href="https://www.facebook.com/tinkoff.ins" class="social__link social__link_facebook" target="_blank" data-ga-category="sociallinks" data-ga-action="facebook" data-ga-link-type="outbound" rel="nofollow"></a></li>
+										<li class="social__item"><a href="https://twitter.com/tinkoff_ins" class="social__link social__link_twitter" target="_blank" data-ga-category="sociallinks" data-ga-action="twitter" data-ga-link-type="outbound" rel="nofollow"></a></li>
+										<li class="social__item"><a href="http://vk.com/tinkoff_ins" class="social__link social__link_vkontakte" target="_blank" data-ga-category="sociallinks" data-ga-action="vkontakte" data-ga-link-type="outbound" rel="nofollow"></a></li>
+										<li class="social__item"><a href="http://www.odnoklassniki.ru/tinkoff.ins" class="social__link social__link_odnoklassniki" target="_blank" data-ga-category="sociallinks" data-ga-action="odnoklassniki" data-ga-link-type="outbound" rel="nofollow"></a></li>
+										<li class="social__item"><a href="http://www.youtube.com/channel/UCjKcaq6pxgNR9gMlud-qwlg" class="social__link social__link_youtube" target="_blank" data-ga-category="sociallinks" data-ga-action="youtube" data-ga-link-type="outbound" rel="nofollow"></a></li>
+										<li class="social__item"><a href="https://plus.google.com/u/0/102621562510586157621/posts" class="social__link social__link_googleplus" target="_blank" data-ga-category="sociallinks" data-ga-action="googleplus" data-ga-link-type="outbound" rel="nofollow"></a></li>
+										<li class="social__item"><a href="http://instagram.com/tinkoff_i" class="social__link social__link_instagram" target="_blank" data-ga-category="sociallinks" data-ga-action="instagram" data-ga-link-type="outbound" rel="nofollow"></a></li>
+										<li class="social__item"><a href="https://ru.foursquare.com/tinkoff_ins" class="social__link social__link_foursquare" target="_blank" data-ga-category="sociallinks" data-ga-action="foursquare" data-ga-link-type="outbound" rel="nofollow"></a></li>
+										<li class="social__item"><a href="http://my.mail.ru/community/tinkoff_ins" class="social__link social__link_moymir" target="_blank" data-ga-category="sociallinks" data-ga-action="moymir" data-ga-link-type="outbound" rel="nofollow"></a></li>
+									</ul>
+								</noindex>
+							</div>
+							<div class="footer__right">
+								<div class="footer__copy">© 2013-2014&nbsp;ОАО «ТОС». Лицензия С № 0191 77 от 23 декабря 2013 года ЦБ РФ</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/jqueryui")
+	@Scripts.Render("~/bundles/bootstrap")
+	@Scripts.Render("~/bundles/angular")
+	@Scripts.Render("~/bundles/app")
+
+	@RenderSection("scripts", required: false)
+</body>
+</html>

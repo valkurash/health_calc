@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>QUnit Tests</title>
+    <link rel="stylesheet" type="text/css" href="file:///C:/Users/v.Kurashova/AppData/Local/Microsoft/VisualStudio/12.0/Extensions/pc0k5bth.uuo/TestFiles/QUnit/qunit.css"/>
+<script type="text/javascript" src="file:///C:/Users/v.Kurashova/AppData/Local/Microsoft/VisualStudio/12.0/Extensions/pc0k5bth.uuo/TestFiles/QUnit/qunit.js"></script>
+
+    
+    
+    
+    <script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/angular.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/angular-mocks.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/angular-resource.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/angular-sanitize.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/angular-route.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/ui-bootstrap.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/app/app.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/app/controllers.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/app/services.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/app/directives.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/app/filters.js"></script>
+
+    <script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/tests/qUnitTests.js"></script>
+
+
+    <script>
+        var amdTestPath = "";
+        if (window.require && typeof window.require === "function" && amdTestPath !== "") {
+            if (window.chutzpah) {
+                window.chutzpah.usingModuleLoader = true;
+            }
+
+            requirejs.config({
+                map: {
+                    '*': {
+                        
+                        }
+                }
+            });
+
+            window.QUnit.config.autostart = false;
+            window.require([amdTestPath], function () {
+                console.log("!!_!! Starting QUnit from inline AMD call...");
+                if (!window._Chutzpah_covobj_name) {
+                    window.QUnit.start();
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="qunit-header">Unit Tests</h1>
+    <h2 id="qunit-banner"></h2>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests"></ol>
+    <div id="qunit-fixture"></div>
+</body>
+</html>

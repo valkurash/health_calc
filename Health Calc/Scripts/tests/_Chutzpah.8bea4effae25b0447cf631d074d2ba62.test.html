@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Jasmine Spec Runner</title>
+    <link rel="stylesheet" type="text/css" href="file:///C:/Users/v.Kurashova/AppData/Local/Microsoft/VisualStudio/12.0/Extensions/pc0k5bth.uuo/TestFiles/jasmine/v2/jasmine.css"/>
+<script type="text/javascript" src="file:///C:/Users/v.Kurashova/AppData/Local/Microsoft/VisualStudio/12.0/Extensions/pc0k5bth.uuo/TestFiles/jasmine/v2/jasmine.js"></script>
+<script type="text/javascript" src="file:///C:/Users/v.Kurashova/AppData/Local/Microsoft/VisualStudio/12.0/Extensions/pc0k5bth.uuo/TestFiles/jasmine/v2/jasmine-html.js"></script>
+<script type="text/javascript" src="file:///C:/Users/v.Kurashova/AppData/Local/Microsoft/VisualStudio/12.0/Extensions/pc0k5bth.uuo/TestFiles/jasmine/v2/boot.js"></script>
+<link rel="shortcut icon" type="image/png" href="file:///C:/Users/v.Kurashova/AppData/Local/Microsoft/VisualStudio/12.0/Extensions/pc0k5bth.uuo/TestFiles/jasmine/v2/jasmine_favicon.png"/>
+
+    
+    
+    
+    <script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/jasmine/jasmine-jquery.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/angular.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/angular-mocks.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/angular-resource.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/angular-sanitize.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/angular-route.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/ui-bootstrap.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/app/app.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/app/controllers.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/app/services.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/app/directives.js"></script>
+<script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/app/filters.js"></script>
+
+    <script type="text/javascript" src="file:///C:/tinkoff/develop/Health%20Calc/Health%20Calc/Scripts/tests/controllersSpec.js"></script>
+
+    <script type="text/javascript">
+
+        (function () {
+            var amdTestPath = "";
+            if (window.require && typeof window.require === "function" && amdTestPath !== "") {
+                if (window.chutzpah) {
+                    window.chutzpah.usingModuleLoader = true;
+                }
+
+                requirejs.config({
+                    map: {
+                        '*': {
+                            
+                            }
+                    }
+                });
+
+                window.require([amdTestPath], function () {
+
+                    console.log("!!_!! Stating Jasmine from AMD callback...");
+                    window.initializeJasmine();
+                });
+            }
+            else {
+                var currentWindowOnload = window.onload;
+
+                window.onload = function() {
+                    if (currentWindowOnload) {
+                        currentWindowOnload();
+                    }
+                    window.initializeJasmine();
+                };
+            }
+
+        })();
+    </script>
+</head>
+<body>
+</body>
+</html>

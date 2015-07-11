@@ -1,0 +1,3884 @@
+.fieldset._hidden, .input-wrap._hidden, div._hidden {
+    display: none;
+}
+
+.fieldset__title {
+    font-family: 'pf_highway_sans_thin', Arial, Verdana, sans-serif;
+    font-size: 36px;
+    line-height: 38px;
+    margin-bottom: 20px;
+    color: #423e3e;
+}
+
+.fieldset_inline .fieldset__title {
+    line-height: 20px;
+}
+
+.fieldset__title.fieldset__title_inline {
+    display: inline-block;
+    vertical-align: middle;
+    color: #8A8989;
+    font-family: 'pragmatica_light', Arial, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    width: 123px;
+    margin-bottom: 29px;
+}
+
+.label-wrap {
+    display: inline-block;
+    vertical-align: middle;
+    width: 103px;
+    margin-right: 20px;
+}
+
+.label, .account__label {
+    color: #8a8989;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.input__label-after, .textarea__label-after {
+    color: #8a8989;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.textarea__label-after {
+    margin-left: 20px;
+    font-size: 12px;
+}
+
+.label_inline {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    /*margin-right: 0px;*/
+}
+
+/*
+.select-wrap_inline .label.label_inline-select,
+.label_inline-textarea,
+.label_inline-input {
+    display: inline-block;
+    vertical-align: middle;
+    width: 132px;
+}*/
+
+.label_inline-textarea,
+.label_inline-input {
+    margin-right: 20px;
+}
+
+.radio_button .label, .select-wrap_inline .label {
+    width: auto;
+    margin-right: 20px;
+}
+
+.input-wrap_inline .label, .input-wrap_inline .label-wrap {
+    width: auto;
+    margin-right: 4px;
+}
+
+.input-wrap_inline.input-wrap_spinner .label {
+    margin-right: 0px;
+}
+
+.textarea-wrap, .select-wrap, .input-wrap, .radio-group {
+    margin-bottom: 29px;
+}
+
+.textarea-wrap._invalid, .select-wrap._invalid, .input-wrap._invalid, .radio-group._invalid, .checkbox-wrap._invalid, .autocomplete-wrapper._invalid {
+   /* margin-bottom: 0;*/
+    position: relative;
+
+}
+
+.input-wrap._invalid input, .textarea-wrap._invalid .textarea-wrapper, .autocomplete-wrapper._invalid, .input-wrap_autocomplete._invalid {
+    border-color: #dd2e17;
+}
+
+.input-wrap_inline {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-right: 17px;
+}
+
+.input_to,
+.input_from  {
+    margin-right: 0;
+}
+
+input.yellow-btn {
+    /*padding: 9px 30px;*/
+    margin-left: 123px;
+    margin-top: 10px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input.yellow-btn::-moz-focus-inner { 
+	border: 0; 
+	padding: 0; 
+	margin-top: -5px; 
+	margin-bottom: -5px; 
+}
+
+/************************** RADIO *************************************/
+.radio {
+    overflow: hidden;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    border: solid 1px #bababa;
+    background: #fff;
+    position: relative;
+    cursor: pointer;
+}
+
+.radio-wrap {
+    display: inline-block;
+    vertical-align: middle;
+    /*margin-right: 25px;*/
+    margin-right: 70px;
+    margin-bottom: 29px;
+}
+
+.radio-wrap .radio, .radio-wrap .label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.radio-wrap .label {
+    width: auto;
+    margin-right: 0;
+}
+
+.radio-wrap .radio {
+    /*margin-right: 20px;*/
+    margin-right: 10px;
+}
+
+.radio-wrap_button .radio {
+    display: none;
+}
+
+.radio-wrap .label {
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.radio-wrap_button {
+    margin-right: 0px;
+}
+
+.radio-wrap_button .label {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 2px solid #74A3C7;
+    border-radius: 30px;
+    font-size: 19px;
+    padding: 19px 15px;
+    text-align: center;
+    cursor: pointer;
+    margin: 0;
+    width: auto;
+    min-width: 106px;
+    margin-left: 20px;
+    color: #000000;
+}
+
+.fieldset_payment .radio-wrap_button:first-child .label {
+    margin-left: 0;
+}
+
+.radio-wrap_button .radio._checked ~ .label {
+    background: #74A3C7;
+    color: #FFFFFF;
+}
+
+div._disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+
+div._disabled .radio, div._disabled .select {
+    cursor: default;
+}
+
+div._disabled .help-icon, div._disabled .help-icon:before {
+    cursor: default;
+}
+
+.radio._checked:before {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    background: #70a4d8;
+}
+
+.radio input {
+    margin-left: -100px;
+}
+
+.radio__title {
+    margin-left: 8px;
+}
+
+/**** для текстовых радио - как в переключении валюты для формы путешествий ****/
+.radio-wrap_text .radio {
+    display: none;
+}
+
+.radio-wrap__label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+/************************** RADIO *************************************/
+
+
+
+/*********************** SELECT *************************/
+.select {
+    background: #fff;
+    border-radius: 8px;
+    border: solid 1px #bababa;
+    width: 208px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+/*
+.select._disabled {
+    opacity: 0.3;
+    cursor: default;
+}*/
+
+.select__area {
+    padding: 16px 30px 16px 16px;
+    font-size: 18px;
+    line-height: 16px;
+    overflow: hidden;
+}
+
+.select__selection {
+
+}
+
+.select__button {
+    position: absolute;
+    top: 50%;
+    margin-top: -3px;
+    right: 8px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #505050;
+    display: block;
+}
+
+.select__list {
+    list-style: none;
+    margin: 0;
+}
+
+.select__list-wrapper {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 15px 1px rgba(0, 0, 0, 0.2);
+    margin-top: 2px;
+    z-index: 10000;
+    position: absolute;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.select__list-item {
+    padding: 5px 16px;
+    cursor: pointer;
+}
+
+.select__list-item_current, .select__list-item_selected {
+    background: #6FA6DF;
+}
+
+.select-wrap_inline {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 50px;
+}
+
+.select-wrap_inline:last-child {
+    margin-right: 0;
+}
+
+.label + .select {
+    /*margin-left: 10px;*/
+}
+
+.select-wrap_inline .label + .select {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+
+}
+
+.select-wrap._inactive {
+    display: none;
+}
+
+/*********************** SELECT *************************/
+
+/*********************** TEXTAREA *************************/
+.textarea {
+    background: #FFFFFF;
+    border: none;
+    border-right: 4px solid #FFFFFF;
+    margin: 0 0 11px;
+    padding: 8px;
+    resize: none;
+    border-radius: 7px;
+    outline: none;
+    font-family: 'pragmatica_light',Arial,sans-serif;
+    font-size: 16px;
+    /*font-family: 'pragmatica_book',Arial,sans-serif;*/
+}
+
+
+/******** textarea placeholder styles **********/
+/******** separate sintaxis important! **********/
+.textarea:-moz-placeholder {   /* Firefox 18- */
+    font-size: 16px;
+}
+
+.textarea::-moz-placeholder {  /* Firefox 19+ */
+    font-size: 16px;
+}
+
+.textarea::-webkit-input-placeholder {  /* WebKit browsers */
+    font-size: 16px;
+}
+
+.textarea:-ms-input-placeholder {  /* Internet Explorer 10+ */
+    font-size: 16px;
+    color: #999999;
+}
+/******** end textarea placeholder styles **********/
+/********** input placeholder styles ************/
+.input:-moz-placeholder {   /* Firefox 18- */
+    color: #BBBBBB;
+}
+
+.input::-moz-placeholder {  /* Firefox 19+ */
+    color: #BBBBBB;
+}
+
+.input::-webkit-input-placeholder {  /* WebKit browsers */
+    color: #BBBBBB;
+}
+
+.input:-ms-input-placeholder {  /* Internet Explorer 10+ */
+    color: #999999;
+}
+/******** end input placeholder styles **********/
+
+.textarea-wrap .textarea {
+    /*color: #000000;*/
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: normal;
+    height: 87px;
+    line-height: 24px;
+    margin: 0;
+    width: 486px;
+}
+.textarea-wrap .textarea-wrapper .textarea {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.textarea-wrap .label-wrap {
+    vertical-align: top;
+    margin-top: 14px;
+}
+
+.textarea-wrap .textarea-wrapper {
+    border: 1px solid #BBBBBB;
+    background-color: #fff;
+    padding: 9px 4px 9px 19px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: normal;
+    height: 87px;
+    line-height: 24px;
+    margin: 0;
+    width: 486px;
+    border-radius: 7px;
+}
+
+/*********************** TEXTAREA *************************/
+
+/************************* INPUT ***********************************/
+.ui-spinner-div-val, .input, .autocomplete-wrapper {
+    border: 1px solid #BBBBBB;
+    color: #000000;
+    display: inline-block;
+    font-size: 16px;
+    height: 48px;
+    padding: 0 19px;
+    vertical-align: middle;
+    width: 469px;
+    border-radius: 6px;
+    line-height: 32px;
+    font-family: 'pragmatica_light', Arial, Verdana, sans-serif;
+    outline: none;
+}
+
+.label-wrap + .autocomplete-wrapper {
+    width: 447px;
+}
+
+.autocomplete-wrapper_city-search .input, 
+.autocomplete-wrapper_city-search .autocomplete-wrapper {
+    font-family: 'pragmatica_light', Arial, Verdana, sans-serif;
+    font-size: 21px;
+}
+
+.input_date, input[type="text"].input_date:disabled {
+    width: 125px;
+    border: 1px solid #bbbbbb;
+    padding: 0 19px;
+    height: 48px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #000000;
+    /*-webkit-text-fill-color:#000;*/
+    -webkit-opacity: 1;
+    background: #fff url(../img/form-custom-elements.png) no-repeat 91% -418px;
+    cursor: pointer;
+    /*margin-left: 28px;*/
+    position: relative;
+}
+
+.input_medium {
+    width: 152px
+}
+
+.input_tiny {
+    padding-left: 9px;
+    padding-right: 9px;
+    text-align: center;
+    width: 40px;
+}
+
+.input-wrap_tiny {
+    margin-right: 0;
+}
+
+.label + .autocomplete-wrapper .input {
+    width: 388px;
+    padding: 0 40px 0 20px;
+}
+
+.input_autocomplete {
+    border: none;
+    padding: 0;
+    width: 100%;
+    background: none;
+}
+
+.label + .autocomplete-wrapper {
+    width: 448px;
+    padding: 0;
+}
+
+.autocomplete-wrapper {
+    position: relative;
+    padding: 0 40px 0 20px;
+    width: 570px;
+    background-color: #fff;
+}
+
+.autocomplete-wrapper:after {
+    display: block;
+    background: url("../img/bigger-icons.png") 0 0 no-repeat;
+    width: 40px;
+    height: 46px;
+    position: absolute;
+    content: '';
+    top: 10px;
+    right: 0px;
+}
+
+.autocomplete-wrapper._active {
+    border-color: #70a4d8;
+}
+
+.autocomplete-wrapper._active:after {
+    display: none;
+}
+
+.autocomplete-wrapper._disabled {
+    background-color: #ececec;
+}
+
+.input.input_autocomplete.form__error {
+    background: none;
+}
+
+.input-wrap._invalid .autocomplete-wrapper, .autocomplete-wrapper._invalid {
+    background-color: #FFF5F5;
+}
+
+
+.autocomplete-helper {
+    margin-bottom: 8px;
+}
+
+.autocomplete-helper_bottom {
+    margin-top: 8px;
+}
+
+.autocomplete-wrapper_inside {
+    height: auto;
+    min-height: 48px;
+}
+
+.autocomplete-wrapper_inside .input_autocomplete {
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.autocomplete-wrapper_inside .autocomplete-result {
+    display: inline;
+    vertical-align: middle;
+}
+
+.autocomplete-wrapper_inside:after {
+    top: 50%;
+    margin-top: -13px;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+textarea::-ms-clear {
+    display: none;
+}
+/************************* INPUT ***********************************/
+
+/******************************* SPINNER *********************************/
+.input_spinner {
+    width: 32px;
+    padding-right: 30px;
+    padding-left: 16px;
+    height: 47px;
+}
+
+.input-wrap_spinner {
+    position: relative;
+}
+
+.ui-spinner-div-val {
+    padding-right: 0;
+    border-radius: 8px 0 0 8px;
+    padding-left: 16px;
+    height: 45px;
+    line-height: 45px;
+    width: 32px;
+}
+
+.ui-spinner-div {
+    padding: 0;
+    width: 30px;
+    height: 49px;
+    position: absolute;
+    top: -1px;
+
+}
+
+.ui-widget-content.ui-spinner {
+    background: none;
+    box-shadow: none;
+}
+
+.ui-spinner-div-val,
+.ui-spinner-input {
+    margin: 0;
+    background-color: #fff;
+}
+
+.ui-spinner-button, .ui-spinner-button.ui-state-hover {
+    background: #bbbbbb;
+    width: 30px;
+    height: 23px;
+    cursor: pointer;
+    color: #000;
+    border: none;
+
+}
+
+.ui-spinner-button:before {
+    display: block;
+    content: '-';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    color: #000;
+    font-size: 16px;
+    line-height: 10px;
+    left: 50%;
+    top: 50%;
+    margin: -5px 0 0 -5px;
+}
+
+.input-wrap_spinner-outside .ui-spinner a.ui-spinner-button.ui-spinner-down:before {
+    content: "=";
+    height: 5px;
+    margin-top: -2px;
+    overflow: hidden;
+}
+
+.ui-spinner-up:before {
+    content: '+';
+}
+
+.input-wrap_spinner .ui-widget-content {
+    border-radius: 0 8px 8px 0;
+}
+
+.ui-spinner-div-val,
+.label + .ui-spinner {
+    margin-left: 10px;
+}
+
+.input-wrap_spinner.input-wrap_inline {
+    margin-right: 60px;
+}
+
+.input-wrap_spinner.input-wrap_inline:last-child {
+    margin-right: 0;
+}
+
+.input-wrap_spinner .ui-button-text {
+    display: none;
+}
+/******************************* SPINNER *********************************/
+
+/************************* CHECKBOX *******************/
+.checkbox-wrap {
+    margin-bottom: 29px;
+}
+
+.checkbox-wrap_inline {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.checkbox {
+    background: url("../img/form-custom-elements.png") no-repeat 0 -105px rgba(0, 0, 0, 0);
+    cursor: pointer;
+    height: 18px;
+    width: 16px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.checkbox_big {
+    width: 22px;
+    height: 22px;
+    background: url(../img/form-custom-elements.png) 0 -560px;
+}
+
+.checkbox_big._disabled, .checkbox_auto._disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.checkbox._checked {
+    background: url("../img/form-custom-elements.png") no-repeat 0 1px rgba(0, 0, 0, 0);
+}
+
+.checkbox_big._checked {
+    background-position: 0 -595px;
+}
+
+.checkbox input {
+    margin-left: -100px;
+}
+
+.checkbox + .label {
+    display: inline-block;
+    vertical-align: top;
+    color: #000000;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-right: 0px;
+    margin-top: 2px;
+    width: auto;
+    cursor: pointer;
+    max-width: 600px;
+}
+
+/************************* CHECKBOX *******************/
+
+/************************** SLIDER ***********************/
+.input-wrap_slider {
+
+    margin-top: 82px;
+    position: relative;
+}
+
+.slider-wrapper {
+    position: relative;
+}
+
+.fieldset + .input-wrap_slider {
+    margin-top: 30px;
+}
+
+.slider {
+    box-shadow: none;
+    height: 4px;
+    border-radius: 4px;
+    background: #b5b6b5;
+    position: relative;
+    /*margin: 0 11px;*/
+    cursor: pointer;
+}
+
+.input-wrap_slider .label {
+    display: inline-block;
+    width: 123px;
+    vertical-align: middle;
+}
+
+.label ~ .slider-wrapper {
+    width: 468px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ui-slider .ui-slider-handle {
+    width: 22px;
+    height: 22px;
+    border-radius: 22px;
+    border: solid 1px #ebebeb;
+    display: block;
+    top: -11px;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.05);
+    z-index: 5;
+    position: absolute;
+    cursor: pointer;
+    outline: none;
+}
+
+.slider__handle-wrapper {
+    position: relative;
+}
+
+.slider__info {
+    position: absolute;
+    font-weight: normal;
+    left: 0;
+    bottom: 30px;
+    background: #fff;
+    border-radius: 5px;
+    border: solid 1px #bbbbbb;
+    font-size: 16px;
+    color: #000;
+    padding: 10px;
+    white-space: nowrap;
+    z-index: 100;
+}
+
+.slider__info span {
+    overflow: hidden;
+    height: 20px;
+    display: block;
+}
+
+
+.input-wrap_slider > input {
+    display: none;
+}
+
+.slider__info input {
+    border: none;
+    font-size: 16px;
+    color: #000;
+    font-family: 'pragmatica_light',Arial,sans-serif;
+    margin-top: -4px;
+}
+
+.slider__info::before, .slider__info::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    border: 5px solid transparent;
+    margin-left: -5px;
+}
+
+.slider__info::before, .slider__info::after {
+    bottom: -11px;
+    border-top: 5px solid #bbbbbb;
+}
+
+.tablet.android .slider__info::before, .no-mobile .ie9 .slider__info::before, .no-mobile .ie10 .slider__info::before, .no-mobile .ie11 .slider__info::before, .slider__info::after {
+    border-top: 5px solid #bbbbbb;
+}
+
+.slider__info::after {
+    border-top: 5px solid #fff;
+    bottom: -10px;
+}
+
+.slider__range {
+    background: #ffdd2e;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 4px;
+    border-radius: 4px;
+    z-index: 1;
+    width: 0;
+}
+
+.slider__price {
+    color: #bbbcbb;
+    font-size: 13px;
+    position: absolute;
+    display: inline-block;
+    top: 12px;
+    font-family: 'pf_highway_sans_prolight';
+}
+
+.slider__price._inactive {
+    display: none;
+}
+/*
+.submission__slider-price_sec {
+    color: #3e4757;
+}*/
+
+.slider__price_min {
+    left: 0;
+}
+
+.slider__price_max {
+    right: 0;
+}
+
+.slider__price .rouble {
+    color: #bbbcbb;
+    font-size: 14px;
+    margin-left: 4px;
+    margin-top: -2px;
+}
+/*
+.submission__slider-price._upper {
+    top: -26px;
+}*/
+
+/************************** SLIDER ***********************/
+
+/********************** ERROR ******************************/
+.form .input._invalid {
+    margin-bottom: 0;
+}
+
+.form__error-wrap {
+    /*margin-left: 162px;
+    margin-bottom: 9px;*/
+    position: absolute;
+    left: 123px;
+    bottom: -20px;
+    width: 500px;
+}
+
+.form__error-wrap .form__error {
+   line-height: 14px;
+}
+
+.checkbox-wrap .form__error-wrap {
+    left: 26px;
+}
+
+.fieldset_range  .form__error-wrap {
+    left: 0;
+}
+
+.form__error {
+    color: #d10000;
+    font-size: 14px;
+    font-family: 'pragmatica_book',Arial,sans-serif;
+}
+
+.form_callback .input.form__error,
+.textarea-wrap._invalid .textarea-container_files,
+.textarea-wrap._invalid .textarea-wrapper,
+.input.form__error, .textarea.form__error {
+    background-color: #FFF5F5;
+    border-color: #DD2E17;
+    font-size: 16px;
+}
+
+.error-icon {
+    display: inline-block;
+    background: url(../img/error.png) no-repeat right 0px;
+    height: 17px;
+    width: 17px;
+    margin: 17px 0 0 3px;
+    vertical-align: top;
+}
+
+.input-wrap .error-icon {
+    display: none;
+}
+
+.textarea-wrap._invalid .error-icon,
+.input-wrap._invalid .error-icon {
+    background: url("../img/error.png") no-repeat scroll right 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 17px;
+    margin: 0px 0 0 3px;
+    vertical-align: middle;
+    width: 17px;
+
+}
+/********************** ERROR ******************************/
+
+/***************** TABS & FILTER SWITCHER ******************/
+.filter-switcher__header__item,
+.tabs-switcher__header__item  {
+    border: 1px solid #74A3C7;
+    border-radius: 34px;
+    display: inline-block;
+    vertical-align: top;
+    color: #74A3C7;
+    cursor: pointer;
+    background-color: transparent;
+    margin-right: 9px;
+    text-decoration: none;
+}
+
+.filter-switcher__header__item:last-child,
+.tabs-switcher__header__item:last-child {
+    margin-right: 0px;
+}
+
+.filter-switcher__header__item._active,
+.tabs-switcher__header__item._active {
+    background-color: #74A3C7;
+    color: #fff;
+}
+
+.filter-switcher__header__item_text,
+.tabs-switcher__header__item_text {
+    padding: 10px 20px;
+    line-height: 16px;
+    font-size: 16px;
+}
+
+.filter-switcher__header__item_image,
+.tabs-switcher__header__item_image {
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+    position: relative;
+}
+
+.filter-switcher__header__item_image:before,
+.tabs-switcher__header__item_image:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 34px;
+    height: 34px;
+}
+
+.tabs-switcher__header__item_special-offer:before {
+    background: url(../img/icons_lk.png) no-repeat -1px -1px;
+}
+
+.tabs-switcher__header__item_finish-calc:before {
+    background: url(../img/icons_lk.png) no-repeat 0px -127px;
+}
+
+.tabs-switcher__header__item_bills:before {
+    background: url(../img/icons_lk.png) no-repeat -1px -192px;
+}
+
+.tabs-switcher__header__item_documents:before {
+    background: url(../img/icons_lk.png) no-repeat -1px -256px;
+}
+
+.tabs-switcher__header__item_update-request:before {
+    background: url(../img/icons_lk.png) no-repeat -1px -61px;
+}
+
+._active.tabs-switcher__header__item_special-offer:before {
+    background: url(../img/icons_lk.png) no-repeat -1px -341px;
+}
+
+._active.tabs-switcher__header__item_finish-calc:before {
+    background: url(../img/icons_lk.png) no-repeat 0px -467px;
+}
+
+._active.tabs-switcher__header__item_bills:before {
+    background: url(../img/icons_lk.png) no-repeat -1px -532px;
+}
+
+._active.tabs-switcher__header__item_documents:before {
+    background: url(../img/icons_lk.png) no-repeat -1px -596px;
+}
+
+._active.tabs-switcher__header__item_update-request:before {
+    background: url(../img/icons_lk.png) no-repeat -1px -401px;
+}
+
+.filter-switcher__content-wrap,
+.tabs-switcher__content {
+    padding-top: 13px;
+    clear: both;
+}
+.filter-switcher__content-wrap {
+    padding-top: 22px;
+}
+/***************** TABS & FILTER SWITCHER ******************/
+
+
+/******************* MODIFICATIONS *************************/
+
+/*********************** Calc form ********************/
+.calculator .search-form {
+    width: auto;
+}
+
+.calculator .search-form__input {
+    font-size: 21px;
+    width: 100%;
+}
+
+.search-form__input-wrap {
+    border: 1px solid #BBBBBB;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.search-helper {
+    margin-top: 14px;
+    font-size: 21px;
+}
+
+.search-form__note {
+    font-size: 18px;
+    margin-top: 4px;
+    font-family: 'pf_highway_sans_prolight';
+}
+
+.submission__radio-item .radio-wrap {
+    margin-right: 0;
+}
+
+.calculator .search-form {
+    margin-top: 14px;
+}
+/*********************** Calc form ********************/
+
+/*************** Extra form travel calculator *********/
+
+/**************** Property simple form *******************/
+.calculator_property .submission__main .input {
+    width: 140px;
+    vertical-align: middle;
+}
+
+.calculator_property .submission__main .label {
+    width: 350px;
+    display: inline-block;
+    font-size: 20px;
+    color: #000;
+    margin-right: 0;
+    font-family: 'pf_highway_sans_prolight';
+}
+
+.calculator_property .submission__main .rouble {
+    margin-left: 8px;
+    font-size: 24px;
+}
+/**************** Property simple form *******************/
+
+/****************** Cost form ****************************/
+.select_TermType {
+    font-size: 26px;
+    font-family: 'pf_highway_sans_thin', Arial, Verdana, sans-serif;
+    width: 132px;
+    height: auto;
+}
+
+.select_TermType .select__area {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 26px;
+    font-family: 'pf_highway_sans_thin', Arial, Verdana, sans-serif;
+}
+/****************** Cost form ****************************/
+
+/******************** Property Detailed form ***********************/
+/*.switch_franchise .select__area {
+    padding: 11px 20px 11px 6px;
+    font-size: 21px;
+    color: #3e4757;
+}
+
+.switch_franchise .select {
+    width: 72px;
+    font-size: 21px;
+    line-height: 16px;
+    color: #3e4757;
+    height: auto;
+    margin-left: 8px;
+}
+
+.submission__radio-item .radio-wrap {
+    margin: 0;
+}
+
+.submission__radio-item .radio-wrap .radio {
+    margin-right: 8px;
+}
+
+
+.switch_franchise .label {
+    font-size: 21px;
+}
+
+.radio-wrap_franchise .label {
+    width: auto;
+    margin-right: 0;
+}*/
+/******************** Detailed form ***********************/
+
+/******************** Checkout ****************************/
+.input-wrap_inline .label.label_agreement-date {
+    margin-right: 20px;
+}
+
+.input-wrap_room,
+.input-wrap_registration-room {
+    margin-right: 0;
+}
+
+.input-wrap_inline.input-wrap_registration-house-num .label,
+.input-wrap_inline.input-wrap_house-num .label {
+    width: 123px;
+    margin-right: 0;
+}
+
+.checkbox-wrap_register-is-post-address,
+.checkbox-wrap_person-agreement,
+.checkbox-wrap_agreement,
+.checkbox-wrap_monthly,
+.checkbox-wrap_montly,
+.checkbox-wrap_insurance-is-register-address,
+.checkbox-wrap_register-is-home-address {
+    margin-left: 123px;
+}
+
+.checkbox + .label.label_person-agreement,
+.checkbox + .label.label_agreement,
+.checkbox + .label.label_monthly,
+.checkbox + .label.label_register-is-home-address,
+.checkbox + .label.label_insurance-is-register-address {
+    max-width: 509px;
+    vertical-align: top;
+}
+
+.fieldset__title.fieldset__title_insured-person {
+    font-family: 'pragmatica_light';
+    font-size: 21px;
+    margin-bottom: 29px;
+}
+/******************** Checkout ****************************/
+
+/******************** Insured Event ***********************/
+.popup_insured-event .submission__column_left {
+    background: #fff;
+}
+
+.form_insured-event-form {
+    margin: 15px 15px 30px 19px;
+    width: 670px;
+}
+
+.tabs-switcher .form_insured-event-form {
+    margin: 0;
+}
+
+.popup_feedback .label.label_situation,
+.label.label_situation,
+.label-wrap.label-wrap_situation {
+    width: 108px;
+}
+
+.popup_feedback .label-wrap.label-wrap_situation,
+.label-wrap.label-wrap_situation {
+    margin-right: 15px;
+}
+
+.form_insured-event-form .fieldset__title {
+    font-family: 'pf_highway_sans_thin';
+    color: #575656;
+}
+
+.form_insured-event-form .fieldset__title.fieldset__title_inline {
+    color: #8A8989;
+    font-family: 'pragmatica_light',Arial,Verdana,sans-serif;
+}
+
+.calculator.calculator_insured-event .label {
+    color: #8A8989;
+}
+
+.fieldset_declaration-steps {
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 0 0 29px -5px;
+    padding: 15px 18px;
+}
+
+.fieldset__title_declaration-steps {
+    font-family: 'pragmatica_light',Arial,sans-serif;
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 36px;
+}
+
+.textarea-container_files {
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #BBBBBB;
+    border-radius: 7px;
+    background-color: #fff;
+}
+
+.textarea-container_files .textarea {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 9px;
+    border-radius: 0;
+}
+
+.form_insured-event-form .textarea-wrap .textarea {
+    line-height: 24px;
+}
+
+.form_insured-event-form .textarea,
+.form_insured-event-form .select__list-item,
+.form_insured-event-form .select__area {
+    font-size: 16px;
+}
+/******************** Insured Event ***********************/
+
+/******************** Payment Types ************************/
+.submission__column_right .submission__item.submission__item_personel {
+    position: absolute;
+    top: 880px;
+}
+.submission__personel-title {
+    font-size: 25px;
+    font-family: 'pf_highway_sans_thin', Arial, Verdana, sans-serif;
+    color: #000;
+    margin-bottom: 13px;
+}
+.submission__personel-title__name {
+    font-family: 'pragmatica_book', Arial, Verdana, sans-serif;
+}
+.submission__txt_personel {
+    font-size: 15px;
+    margin: 8px 0 13px;
+}
+.yellow-btn_personel-auth {
+    margin-right: 5px;
+    width: 218px;
+    margin-bottom: 19px;
+}
+
+.calculator_travel .txt.txt_caution,
+.txt_caution {
+    margin-left: 123px;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 37px;
+    width: 510px;
+    margin-top: 0;
+}
+.select-wrap_card-valid-month,
+.select-wrap_card-valid-year,
+.input-wrap_card-cvv {
+    display: inline-block;
+    margin-bottom: 15px;
+    vertical-align: top;
+    margin-right: 0;
+}
+.label_payment-type,
+.label_card-valid-year {
+    display: none;
+}
+.input_card-cvv,
+.select-wrap_card-valid-year {
+    margin-left: 9px;
+}
+.label_card-cvv {
+    margin-left: 70px;
+    width: auto;
+}
+.payment-others  {
+    width: 640px;
+}
+.payment-others__item {
+    width: 26%;
+    display: inline-block;
+    color: #74a3c7;
+    min-height: 30px;
+    padding: 8px 0 8px 43px;
+    margin-bottom: 33px;
+    font-size: 18px;
+}
+.payment-others__item_alpha {
+    background: url(../img/payment-system-logos.png) no-repeat 0 4px;
+}
+.payment-others__item_euroset {
+    background: url(../img/payment-system-logos.png) no-repeat 0 -234px;
+}
+.payment-others__item_elexnet {
+    background: url(../img/payment-system-logos.png) no-repeat 0 -476px;
+}
+.payment-others__item_mts {
+    background: url(../img/payment-system-logos.png) no-repeat 0 -77px;
+}
+.payment-others__item_megafon {
+    background: url(../img/payment-system-logos.png) no-repeat 0 -313px;
+}
+.payment-others__item_beeline {
+    background: url(../img/payment-system-logos.png) no-repeat 0 -556px;
+}
+.payment-others__item_qiwi {
+    background: url(../img/payment-system-logos.png) no-repeat 0 -154px;
+}
+.payment-others__item_webmoney {
+    background: url(../img/payment-system-logos.png) no-repeat 0 -388px;
+}
+.payment-others__item_yandex {
+    background: url(../img/payment-system-logos.png) no-repeat 0 -633px;
+}
+.payment-others__more {
+    display: none;
+}
+.payment-others__more-link_wrap {
+    margin-bottom: 20px;
+}
+
+.fieldset_credit-card .input_medium {
+    width: 229px;
+}
+
+.select-wrap_inline .label.label_card-valid-month {
+    width: 103px;
+}
+.select-wrap_inline .label + .select.select_card-valid-month {
+    margin-left: 0;
+}
+/******************** end Payment Types ************************/
+
+/*********************** Calculator slider **********************/
+/*.submission__subject {
+    font-size: 16px;
+}
+
+.submission__subject._with-franchise .label {
+    width: 140px;
+    margin-top: -100px;
+    margin-right: 50px;
+}
+
+.submission__subject .select ~ .rouble {
+    color: #5f5f5f;
+    margin-left: 10px;
+    font-size: 17px;
+}
+
+.submission__subject .select-wrap .label + .select {
+    margin-left: 0;
+    width: 90px;
+}
+
+.submission__subject .select-wrap._percent .label + .select {
+    width: 70px;
+}
+
+.submission__subject .select__area {
+    padding: 14px 30px 10px 16px;
+}
+
+.submission__subject .select-wrap_franchise .label {
+    margin-top: 0;
+    width: 123px;
+}
+
+.submission__subject .select-wrap {
+    margin-bottom: 0;
+}
+
+.select-wrap_franchise._percent > .rouble {
+    display: none;
+}
+
+.select-wrap_franchise._rouble > .percent {
+    display: none;
+}
+
+.submission__subject .percent {
+    margin-left: 8px;
+}*/
+/*********************** Calculator slider **********************/
+
+/************************* Subscribes **************************/
+.form_subscribe {
+    padding-bottom: 75px;
+    text-align: center;
+}
+
+.form_subscribe .fieldset_subscribes {
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 35px 26px 25px;
+    width: 952px;
+    margin: 0 auto;
+}
+
+.form_subscribe .fieldset__title_subscribes {
+    padding: 0 0 25px;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 60px;
+    line-height: 65px;
+}
+
+.form_subscribe .label_email {
+    display: inline-block;
+    vertical-align: middle;
+    width: 205px;
+    color: #000;
+    font-family: 'pragmatica_book';
+    font-size: 16px;
+    line-height: 18px;
+    text-align: left;
+    margin-right: 0;
+}
+
+.block_about-subscribes .label_email {
+    width: 260px;
+}
+
+.form_subscribe .input.input_email {
+    width: 332px;
+    margin-right: 0px;
+}
+
+.form_subscribe input.yellow-btn {
+    margin: 0;
+    vertical-align: top;
+}
+
+/*
+.form_subscribe .error-wrap {
+    text-align: left;
+}
+.form_subscribe .error-wrap ._error {
+    margin: 10px 0 0 296px;
+}
+.block_about-subscribes .error-wrap ._error {
+    margin-left: 322px;
+}
+*/
+.form_subscribe .input.input_email._error {
+    font-size: 16px;
+    color: #D10000;
+}
+/************************* end Subscribes ***********************/
+
+/************************* Ask Question *************************/
+.fieldset__title.fieldset__title_ask-question {
+    font-size: 60px;
+    line-height: 64px;
+    text-align: center;
+    padding: 20px 0 35px;
+    margin-left: -128px;
+    color: #000;
+}
+
+.fieldset_ask-question {
+    margin-left: 128px;
+    margin-bottom: 29px;
+}
+/************************* end Ask Question *********************/
+
+/**************** Calc Finish State ********************/
+.fieldset_finish-ok,
+.fieldset_finish-fail {
+    margin-left: 120px;
+}
+.title_finish-calc-form {
+    font-family: 'pf_highway_sans_thin';
+    font-size: 60px;
+    line-height: 80px;
+    color: #000;
+    width: 1045px;
+    margin: 0 auto;
+}
+.title_finish-fail {
+    padding-left: 85px;
+    background: url(../img/big-cross.png) no-repeat 0 12px;
+}
+.title_finish-ok {
+    padding-left: 100px;
+    background: url(../img/big-check.png) no-repeat 0 6px;
+}
+.message-col {
+    display: inline-block;
+    vertical-align: top;
+}
+.message-col_left {
+    width: 606px;
+    margin-right: 34px;
+    /*border-right: 1px solid #b7b7b7;*/
+}
+
+.message-col_right {
+    width: 410px;
+
+}
+
+.message-social {
+    margin-top: 40px;
+}
+
+.submission__icons_col .submission__icon.submission__icon_finish-calc {    margin-top: 23px;
+}
+.round-icon_yellow {
+    background-color: #ffdd2f;
+}
+
+.finish-message {
+    margin: 55px auto 25px;
+    font-size: 20px;
+    line-height: 29px;
+    width: 1050px;
+    font-family: 'pf_highway_sans_prolight';
+}
+
+.form_finishbuyfail {
+    width: 1145px;
+    margin: 0 auto 113px;
+}
+
+.message-info_finish {
+    margin-bottom: 35px;
+}
+.finish-message__link_img {
+    float: left;
+    margin-right: 30px;
+}
+.finish-message__link_policy-title {
+    font-size: 21px;
+    line-height: 19px;
+    font-family: 'pf_highway_sans_proregular';
+    text-decoration: none;
+    display: block;
+}
+.finish-message__policy-file-size {
+    color: #767676;
+    font-size: 15px;
+    font-family: 'pf_highway_sans_proregular';
+}
+.finish-message__policy-links  {
+    margin-top: 5px;
+}
+.finish-message__policy-link  {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+}
+.finish-message__link_blue {
+    color: #70a4d8;
+    font-family: 'pf_highway_sans_prolight';
+    padding-bottom: 7px;
+}
+.finish-message__link_print {
+    background: url(../img/small-icons-policy-actions.png) no-repeat 0 4px;
+    padding-left: 27px;
+    font-size: 15px;
+    margin-right: 15px;
+}
+.finish-message__link_send-sms {
+    background: url(../img/small-icons-policy-actions.png) no-repeat 0 -74px;
+    padding-left: 24px;
+    font-size: 15px;
+}
+.message-info_account-info {
+    margin-top: 47px;
+    font-size: 18px;
+    line-height: 23px;
+}
+.message-info_continue-calc {
+    margin-top: 45px;
+}
+.title_continue-calc {
+    font-size: 25px;
+}
+.title_share {
+    font-size: 29px;
+    line-height: 29px;
+    margin-bottom: 8px;
+    font-family: 'pf_highway_sans_prolight';
+}
+.finish-message__social-info {
+    font-family: 'pf_highway_sans_prolight';
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.calculator-form__finish-message_fail {
+}
+.finish-message__strong {
+    font-family: 'pragmatica_book';
+}
+.fieldset_finish-calculator.fieldset_payment-credit-card {
+    margin-left: 10px;
+}
+.fieldset_finish-calculator .label_calculator {
+    color: #000;
+}
+.message-col,
+.fieldset_submit {
+    margin-bottom: 113px;
+}
+.finish-message_ok {
+    margin-bottom: 0;
+}
+
+.gettaxi {
+    font-size: 40px;
+}
+.gettaxi__title {}
+/**************** end Calc Finish State ****************/
+
+
+.win-popup .fieldset,
+.win-popup .fieldset {
+    display: inline-block;
+    margin-top: 24px;
+    vertical-align: top;
+}
+
+.win-popup .fieldset_left {
+    width: 250px;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.win-popup .fieldset_right {
+    width: 288px;
+    padding-left: 12px;
+}
+
+.win-popup .form_auth .fieldset_right {
+    padding-left: 24px;
+    width: 276px;
+}
+
+.win-popup_login .input-wrap {
+    margin-bottom: 24px;
+
+}
+
+.win-popup_login .input {
+    width: 172px;
+    line-height: 18px;
+    font-size: 17px;
+    padding: 0 19px;
+    margin-top: 10px;
+    border-color: #9b9b9b;
+    background: transparent;
+    outline: none;
+    height: 45px;
+}
+
+.win-popup_login .input-wrap_phone .form__error-wrap {
+    left: 0;
+}
+
+.win-popup_login .input-wrap_sms .form__error-wrap {
+    left: 86px;
+}
+
+.win-popup_login .input-wrap._invalid .error-icon {
+    margin: 12px 0 0 10px;
+}
+
+.win-popup .label {
+    color: #000;
+    font-size: 15px;
+}
+
+.win-popup_login .input-wrap:not(.input-wrap_inline) .label {
+    width: 300px;
+    display: block;
+}
+
+.form_code input.yellow-btn {
+    width: 195px;
+    /*padding: 8px 0px;*/
+    margin: 0;
+}
+
+.win-popup_login .link_phone-change,
+.win-popup_login .cta_phone-change {
+    font-size: 12px;
+    font-family: 'pf_highway_sans_prolight';
+    line-height: 12px;
+    margin-top: 15px;
+    border-bottom: 1px dashed #70A4D8;
+    display: inline-block;
+    text-decoration: none;
+    color: #70A4D8;
+}
+
+.win-popup_login .cta_phone-change:hover {
+    border-bottom: none;
+}
+
+.form_auth .input_sms {
+    height: 45px;
+    width: 81px;
+    margin: 0 0 0 16px;
+}
+
+.form_auth .input-wrap {
+    margin-top: 14px;
+}
+
+.form_auth input.yellow-btn {
+    display: block;
+    margin: 17px 0 0;
+    /*padding: 6px 0;*/
+    width: 173px;
+}
+
+.form_auth .input-wrap:first-child {
+    margin-top: 0;
+}
+
+.form_auth .input-wrap_phone {
+    margin-bottom: 0;
+}
+
+.form_registration {
+    margin-top: 22px;
+}
+
+.form_registration input.yellow-btn {
+    margin-top: 0;
+}
+
+.form_auth .input-wrap_inline {
+    margin-right: 0;
+}
+.form_code .txt a {
+    color: #70A4D8;
+}
+/******************** end Login (auth) *************************/
+
+/************************ Registration *************************/
+.form_registration .label {
+    color: #000;
+    font-size: 15px;
+}
+
+.form_registration .label_person-agreement {
+    font-size: 13px;
+}
+
+.form_registration .checkbox + .label.label_person-agreement {
+    max-width: 415px;
+}
+
+.form_registration .input {
+    width: 385px;
+    background-color: transparent;
+}
+
+.form_registration .input_medium {
+    width: 216px;
+}
+
+.yellow-btn_register {
+    margin-left: 123px;
+}
+
+.win-popup .checkbox + .label.label_person-agreement {
+    margin-top: 0;
+}
+/******************** end Registration *************************/
+
+/********************** Pass Change  ***************************/
+.form_change {
+    text-align: left;
+}
+
+.form_change .input-wrap_inline.input-wrap_email {
+    margin: 15px 0 10px;
+    text-align: left;
+}
+
+.form_change .input_medium.input_email {
+    width: 200px;
+}
+
+.form_change input.yellow-btn {
+    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+}
+
+.form_change .form__error-wrap {
+    width: auto;
+    right: 20px;
+    left: auto;
+}
+
+.popup_phone-change {
+    width: 705px;
+}
+
+.submission__inner_phone-change {
+    padding-top: 30px;
+}
+
+.submission__inner_phone-change input.yellow-btn,
+.submission__inner_phone-change .form_code input.yellow-btn {
+    margin-top: 0;
+    margin-left: 220px;
+}
+
+.submission__inner_phone-change .label-wrap {
+    width: 220px;
+    margin-right: 0;
+}
+
+.submission__inner_phone-change .txt_pass-change {
+    margin: 0 0 50px;
+}
+
+.submission__inner_phone-change {
+    min-height: 300px;
+    padding-right: 150px;
+    background: url(../img/phone_135.png) no-repeat right 30px;
+    margin-right: 10px;
+}
+
+.submission__inner_phone-change .form__error-wrap {
+    width: 280px;
+    left: 220px;
+}
+/******************** end Pass Change  *************************/
+
+/********************** Account Form ***************************/
+
+
+.element-val.element-val_name, .account__block_fullname .account__value {
+    font-family: 'pragmatica_light';
+    font-size: 21px;
+    line-height: 30px;
+    padding-left: 0;
+    width: auto;
+}
+
+.element-val {
+    width: 114px;
+}
+
+
+.element-val, .account__value {
+    color: #000000;
+    display: inline-block;
+    font-family: 'pragmatica_book';
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0 0 0 22px;
+    width: 464px;
+}
+ 
+
+.form_account .element-val-wrap_inline,
+.form_account .element-val-wrap_inline .label,
+.form_account .element-val-wrap_inline .element-val,
+.form_account .input-wrap_inline .label, .input-wrap_inline .label-wrap {
+    width: auto;
+    display: inline-block;
+}
+
+.form_account .element-val-wrap_inline .label.label_registration-house-num {
+    width: 145px;
+}
+
+.form_account .element-val-wrap_inline {
+    margin-right: 39px;
+}
+
+.form_account .element-val-wrap_inline .element-val {
+    padding-left: 0;
+}
+ 
+.element-val-wrap, .account__wrap {
+    margin-bottom: 25px;
+}
+
+.input-wrap_post-room,
+.input-wrap_index-room {
+    margin-right: 0;
+}
+
+.input-wrap_inline.input-wrap_post-house-num .label ,
+.input-wrap_inline.input-wrap_index-house-num .label {
+    width: 135px;
+    margin-right: 0;
+}
+
+.checkbox-wrap_register-is-post-address {
+    margin-left: 135px;
+}
+
+.form_account .checkbox + .label.label_register-is-post-address {
+    width: auto;
+    max-width: 509px;
+    vertical-align: top;
+}
+
+.form_account .txt_update-text {
+    font-family: 'pragmatica_book';
+    font-size: 17px;
+    line-height: 24px;
+}
+
+.form_account .txt_update-text a {
+    color: #74a3c7;
+}
+
+.form_account .yellow-btn {
+    margin: 25px 0 16px;
+    padding-bottom: 17px;
+    padding-top: 15px;
+}
+
+.fieldset__title_personal-info {
+    margin-bottom: 11px;
+}
+
+.form_account .input-wrap_phone {
+    margin-top: 26px;
+}
+
+
+.fieldset_collapsable .fieldset__title {
+    border-bottom: 1px dashed #77808b;
+    color: #77808b;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.fieldset._collapsed .fieldset__title {
+    border-bottom: 1px dashed #74a3c7;
+    color: #74a3c7;
+    display: inline-block;
+}
+
+.fieldset._collapsed div.fieldset__collapsable-content {
+    display: none;
+}
+
+/******************** end Account Form *************************/
+
+/************************** Callback *****************************/
+.win-popup .form_callback {
+    width: 357px;
+}
+
+.form_callback .fieldset__title.fieldset__title_timerange,
+.form_callback .label {
+    color: #000;
+    font-size: 15px;
+    /*font-size: 17px;*/
+    font-family: 'pragmatica_book', Arial, Verdana, sans-serif;
+    /*width: 100px;*/
+    margin-right: 0px;
+}
+
+.submission__item_online .form_callback .fieldset__title.fieldset__title_timerange,
+.submission__item_online .form_callback .label-wrap {
+    width: 93px;
+}
+
+.fieldset_timerange .label {
+    margin-right: 8px;
+}
+
+.form_callback .input {
+    /*width: 168px;*/
+    width: 152px;
+    line-height: 18px;
+    font-size: 16px;
+    padding: 0 19px;
+    margin: 0px 0 0px;
+    border-color: #9b9b9b;
+    background-color: #fff;
+    outline: none;
+    height: 45px;
+    position: relative;
+    z-index: 999;
+    font-family: 'pragmatica_book';
+}
+
+.form_callback .input.input_date {
+    width: 152px;
+}
+
+.form_callback .input-wrap {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.form_callback .fieldset_timerange .input {
+    width: 69px;
+}
+
+.form_callback .input-wrap:first-child {
+    margin-top: 0;
+}
+
+.form_callback .select {
+    width: 190px;
+}
+
+.submission__item_online .form_callback .select {
+    
+}
+
+.submission__item_online .form_callback .select__list-item,
+.submission__item_online .form_callback .select__area {
+    font-size: 16px;
+}
+
+.submission__column_right .fieldset_timerange .error-icon {
+    margin-top: 0;
+}
+
+.form_callback .yellow-btn {
+    font-size: 18px;
+}
+
+.form_callback .form__error-wrap {
+    /*width: 124px;
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 8px;
+    position: static;*/
+    margin-left: 103px;
+    position: static;
+    width: 240px;
+}
+
+.form_callback .fieldset_timerange .form__error-wrap {
+    /*margin-left: 122px;*/
+    margin-left: 103px;
+}
+
+.submission__item_online .form_callback .form__error-wrap {
+    width: auto;
+    float: right;
+    margin: 0 25px 0 0;
+}
+
+.win-popup .form_callback .error-icon {
+    /*display: none;*/
+}
+
+.win-popup .form_callback .fieldset.fieldset_timerange {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.win-popup .form_callback .select-wrap_reason {
+    margin-bottom: 0;
+}
+
+.form_callback .fieldset__title_timerange {
+    width: 103px;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.submission__item_online .form_callback .input-wrap_timerange {
+    margin-right: 0;
+}
+
+.input-wrap_timerange {
+    margin-right: 8px;
+}
+
+.input-wrap_timerange:last-child {
+    margin-right: 0;
+}
+
+.fieldset_timerange .input {
+    width: 68px;
+    padding: 0px;
+    text-align: center;
+}
+
+.form_callback .fieldset_timerange .input-wrap {
+    margin-top: 0px;
+}
+
+.win-popup .form_callback .yellow-btn {
+    margin-left: 105px;
+    margin-top: 20px;
+    /*width: 208px;*/
+    width: 192px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.submission__item_online .form_callback .yellow-btn {
+    margin: 25px 0 0;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 278px;
+}
+
+.submission__item_online .form_callback {
+    margin-top: 9px;
+}
+
+.submission__item_online .form_callback .input {
+    font-size: 15px;
+}
+
+.submission__item_online .form_callback .input.input_phone {
+    padding: 0 6px;
+    width: 148px;
+}
+
+.callback-finish {
+    display: none;
+}
+
+.popup .yellow-btn.yellow-btn_callback,
+.submission__item_online .form_callback {
+    display: none;
+}
+
+.submission__item_online .form_callback .input {
+    width: 122px;
+    margin-bottom: 5px;
+    margin-top: 4px;
+}
+
+.submission__item_online .form_callback .input.input_timerange {
+    width: 58px;
+}
+
+.submission__item_online .form_callback .input-wrap_timerange .label {
+    width: auto;
+}
+
+.submission__item_online .form_callback .input-wrap_timerange .label.label_to {
+    margin: 0 4px 0 4px;
+}
+
+.submission__item_online .form_callback .fieldset__title.fieldset__title_timerange {
+    width: 111px;
+}
+
+.popup .fieldset_call-time {
+    margin-top: 20px;
+}
+
+.call-inp_short.call-inp_phone {
+    width: 160px;
+    padding: 0;
+}
+
+.popup .yellow-btn.yellow-btn_callback {
+    margin: 20px 0 0;
+    width: 210px;
+}
+/************************** end callback *************************/
+
+
+/*************** Radio cover travel calculator ***************/
+.submission__block_extra {
+    margin-top: 30px;
+}
+
+.fieldset_cover {
+    font-family: 'pragmatica_light', Arial, sans-serif;
+
+}
+
+.fieldset_cover .radio-wrap {
+    margin: 0;
+}
+
+.calculator_flat .fieldset_type .radio-wrap:last-child {
+    margin-right: 0;
+}
+
+.fieldset_cover .radio-wrap__label {
+    vertical-align: baseline;
+    font-size: 36px;
+    line-height: 38px;
+    margin-bottom: 20px;
+    margin-right: 8px;
+}
+
+.fieldset_cover .radio-wrap_text .label {
+    vertical-align: baseline;
+    font-size: 36px;
+    line-height: 38px;
+    margin-bottom: 20px;
+    margin: 0 8px 0 0;
+    cursor: pointer;
+
+    border-bottom: 1px dashed #70A4D8;
+    color: #70A4D8;
+    width: auto;
+}
+
+.fieldset_cover .radio-wrap_text ._checked + .label {
+    border: none;
+    color: #000;
+    cursor: default;
+    width: auto;
+}
+
+.fieldset_cover-price .radio-wrap {
+    margin-right: 24px;
+}
+.fieldset_cover-price .radio-wrap:last-child {
+    margin-right: 0;
+}
+
+.fieldset_cover-price .label {
+    font-size: 21px;
+    margin-right: 0;
+    width: auto;
+}
+
+.fieldset_cover-price .radio {
+    margin-right: 8px;
+}
+/*************** Radio cover travel calculator ***************/
+
+/*************** Compensation list ********************/
+.compensation__list {
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.compensation__item {
+    margin-bottom: 18px;
+}
+
+.compensation__block:last-child .compensation__item:last-child {
+    margin-bottom: 0;
+}
+
+.compensation__block {
+    position: relative;
+}
+
+.compensation__price {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    font-size: 36px;
+    line-height: 36px;
+    color: #77808b;
+    margin-top: -18px;
+    font-family: 'pf_highway_sans_thin';
+}
+
+.compensation__currency {
+    margin-left: 10px;
+}
+
+.break {
+    position: absolute;
+    left: 340px;
+    top: 0;
+    height: 100%;
+    width: 28px;
+
+    background: url(../img/break.jpg) -58px 0 repeat-y;
+}
+
+.break__middle, .break__top, .break__bottom {
+    background: url(../img/break.jpg) -2px -117px no-repeat;
+    width: 28px;
+    height: 126px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -67px;
+}
+
+.break__top, .break__bottom {
+    background-position: -2px 0;
+    height: 104px;
+    top: 0;
+    margin: 0;
+}
+
+.break__bottom {
+    top: auto;
+    bottom :0;
+    background-position: -2px -260px;
+}
+
+/*************** Compensation list ********************/
+
+/*************** Extra form travel calculator *********/
+.input-wrap_single-days .label {
+    width: auto;
+}
+
+.travel-days {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 36px;
+    line-height: 34px;
+}
+
+.submission__main .input-wrap_slider {
+    margin-top: 29px;
+}
+
+.submission__block_extra .input__label-after {
+    color: #000;
+}
+
+.submission__block_extra._active {
+    display: block;
+}
+
+.submission__subtitle._collapsed {
+    border-bottom: 1px dashed #70A4D8;
+    color: #70A4D8;
+    cursor: pointer;
+    display: inline;
+}
+
+.submission__subtitle._active {
+    color: #77808b;
+    border-color: #77808b;
+    cursor: pointer;
+    display: inline;
+}
+
+.submission__block_extra .checkbox, .submission__block_extra .label {
+    vertical-align: top;
+
+}
+/*
+.calculator_travel .submission__block_extra .fieldset .checkbox + .label {
+    max-width: 200px;
+}*/
+
+.submission__block_extra .label {
+    margin-top: 3px;
+}
+
+.submission__block_extra .fieldset .checkbox-wrap, .submission__block_extra .fieldset .radio-wrap {
+    margin-left: 0px;
+    margin-right: 0;
+    vertical-align: top;
+    width: 244px;
+}
+
+.submission__block_extra .fieldset .checkbox-wrap:nth-child(2n), .submission__block_extra .fieldset .radio-wrap:nth-child(2n) {
+    margin-left: 75px;
+}
+
+.calculator_travel .submission__block_extra .fieldset .checkbox-wrap:nth-child(2n + 1) {
+    width: 330px;
+}
+.calculator_travel .submission__block_extra .fieldset.fieldset_franchise .checkbox-wrap:nth-child(2n + 1) {
+    width: auto;
+}
+.calculator_travel .submission__block_extra .fieldset_franchise .select-wrap {
+    float: right;
+}
+.calculator_travel .submission__block_extra .fieldset.fieldset_franchise:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.submission__block_extra .fieldset__title {
+    font-size: 21px;
+    line-height: 22px;
+    padding-left: 76px;
+    padding-top: 20px;
+    position: relative;
+    font-family: 'pragmatica_light';
+}
+
+.submission__block_extra .fieldset__title:before {
+    background: url(../img/calc-extra-icons.png) 0 0 no-repeat;
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border: solid 1px #74a3c7;
+    border-radius: 56px;
+    content: '';
+    top: 0;
+    left: 0;
+}
+
+.submission__block_extra .fieldset__title_aim:before {
+    background-position: 0 0;
+}
+
+.submission__block_extra .fieldset__title_sport:before {
+    background-position: 0 -56px;
+}
+
+.submission__block_extra .fieldset__title_accident:before {
+    background-position: 0 -112px;
+}
+
+.submission__block_extra .fieldset__title_luggage:before {
+    background-position: 0 -168px;
+}
+
+.submission__block_extra .fieldset__title_expenses:before {
+    background-position: 0 -224px;
+}
+
+.submission__block_extra .fieldset__title_support:before {
+    background-position: 0 -280px;
+}
+
+.submission__block_extra .fieldset__title_disease:before {
+    background-position: 0 -336px;
+}
+
+.submission__block_extra .fieldset__title_misfortune:before {
+    background-position: 0 -392px;
+}
+
+.submission__block_extra .fieldset__title_circumstances:before {
+    background-position: 0 -448px;
+}
+
+.submission__block_extra .fieldset__title_double:before {
+    background-position: 0 -504px;
+}
+
+.submission__block_extra .fieldset_accident .input-wrap_slider {
+    margin-left: 75px;
+    margin-top: 60px;
+    width: 468px;
+}
+
+.fieldset_franchise {
+    border-top: solid 1px #cccccc;
+    padding-top: 18px;
+}
+
+.submission__block_extra .fieldset_franchise .checkbox-wrap {
+    width: auto;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+.submission__block_extra .fieldset_franchise .label {
+    vertical-align: middle;
+    margin-right: 8px;
+    color: #000;
+}
+
+.fieldset_franchise .select {
+    width: 70px;
+}
+
+.fieldset_franchise .help-icon {
+    margin-right: 0px;
+    margin-left: 0;
+}
+
+.calculator_travel div._disabled.select-wrap_franchise {
+    opacity: 1;
+}
+
+.calculator_travel div._disabled.select-wrap_franchise .input__label-after,
+.calculator_travel div._disabled.select-wrap_franchise .select,
+.calculator_travel div._disabled.select-wrap_franchise .label {
+    opacity: 0.5;
+}
+
+.calculator_travel div._disabled.select-wrap_franchise .help-icon {
+    cursor: pointer;
+}
+
+.submission__block_extra .fieldset_franchise .label-wrap {
+    width: 110px;
+}
+
+.fieldset_franchise .select-wrap {
+    margin-left: 100px;
+    margin-bottom: 0;
+}
+
+.calculator_travel .form_form-main .input-wrap_days .help-icon__popup {
+    right: -165px;
+}
+.calculator_travel .form_form-main .input-wrap_days .help-icon__popup:before {
+    right: 168px;
+}
+/*************** Extra form travel calculator *********/
+
+/*************** Extra form health calculator *************/
+.calculator_health .submission__block_extra .checkbox-wrap {
+    margin-left: 75px;
+    margin-bottom: 18px;
+    width: auto;
+}
+
+.calculator_health .submission__block_extra .fieldset_spinner-group * {
+    float: left;
+}
+
+.calculator_health .submission__block_extra .fieldset + * {
+    clear: both;
+}
+
+.calculator_health .submission__block_extra .input-wrap_spinner {
+    margin: -10px 0 0 48px;
+}
+
+.submission__block_extra .textarea-wrap {
+    margin-left: 75px;
+}
+
+.calculator_health .submission__block_extra .radio-wrap {
+    display: block;
+    margin-bottom: 18px;
+    margin-left: 75px;
+}
+
+.calculator_health .submission__block_extra .radio-wrap:last-child {
+    margin-bottom: 18px;
+    width: 280px;
+}
+
+.calculator_health .submission__block_extra .label {
+    width: auto;
+}
+
+.calculator_health .submission__block_extra .label.label_radio {
+    color: #000;
+}
+
+.calculator_health .submission__block_extra .checkbox-wrap.checkbox-wrap_psych {
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+/*.calculator_health .input-wrap_start.input-wrap_inline .label {
+    width: 143px;
+}
+
+.calculator_health .fieldset_start-date .checkbox-wrap_inline {
+    margin-left: 28px;
+}*/
+
+/********************** Form-feedback ********************/
+.tabs-switcher_feedback-switch .tabs-switcher__header__item {
+    border-width: 2px;
+    padding: 18px 20px;
+    color: #000;
+    margin: 32px 20px 36px 0;
+}
+.tabs-switcher_feedback-switch .tabs-switcher__header__item_text {
+    line-height: 20px;
+    font-size: 20px;
+}
+    
+.tabs-switcher_feedback-switch .tabs-switcher__header__item._active {
+    color: #fff;
+}
+
+.faq_form {
+    border: solid 1px #ccc;
+    border-radius: 6px;
+    background: #f9f9f9;
+    padding: 16px 19px 30px;
+    margin: 0px 0 38px -15px;
+}
+
+.faq__title {
+    font-size: 20px;
+    font-family: 'pf_highway_sans_prolight';
+    line-height: 18px;
+    margin: 0 0 27px;
+}
+
+.faq__item {
+    margin-bottom: 20px;
+}
+
+.faq__item_feedback {
+    margin-bottom: 7px;
+}
+
+.faq__question {
+    cursor: pointer;
+    color: #70a4d8;
+    border-bottom: 1px dashed #70A4D8;
+    /*display: inline-block;*/
+    position: relative;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'pf_highway_sans_prolight';
+}
+
+.faq__question:after {
+    content: '';
+    /*position: absolute;
+    top: 6px;
+    right: -18px;*/
+
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 6px solid #74a3c7;
+
+    display: inline-block;
+    position: relative;
+    right: -9px;
+    top: 0px;
+
+    /*transition: all 0.5s ease;*/
+}
+
+.faq__item._opened > .faq__question:after {
+   /* border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #77808b;
+
+    top: 4px;*/
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    border-left-color: #77808b;
+}
+
+.faq__item-wrap_inner {
+    margin-left: 30px;
+}
+
+.faq__question .blue-link_inner {
+    top: 0;
+}
+
+.faq__answer {
+    margin-top: 14px;
+    display: none;
+    color: #77808b;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.faq__all {
+    color: #70a4d8;
+    display: block;
+    margin: 15px 0 5px;
+    font-family: 'pf_highway_sans_prolight';
+    font-size: 18px;
+}
+
+.input-wrap_contract .input {
+    width: 125px;
+}
+
+.popup_feedback .select__list-item,
+.popup_feedback .select__area,
+.popup_feedback .textarea-wrap .textarea {
+    font-size: 16px;
+}
+
+.popup_feedback .fieldset__title.fieldset__title_inline,
+.popup_feedback .label {
+    width: 103px;
+}
+
+.popup_feedback .form__error-wrap {
+ /*   left: 170px;*/
+}
+
+.popup_feedback .fieldset_range .form__error-wrap {
+    left: 0;
+}
+
+.popup_feedback input.yellow-btn {
+    margin-left: 170px;
+}
+
+.popup_feedback .fieldset__title.fieldset__title_inline {
+    margin-right: 20px;
+}
+
+.popup_feedback .input-wrap_inline .label {
+    margin-right: 7px;
+    width: auto;
+}
+
+.form_suggest .txt_text {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.popup_suggest-idea {
+    width: 705px;
+}
+/********************** Form-feedback ********************/
+
+/********************** Form payment **********************/
+.submission__item_form .label.label_watch-day, .submission__item_form .label.label_agreement-date {
+    vertical-align: middle;
+    width: 185px;
+}
+
+.select-wrap_watch-time .select {
+    width: 95px;
+}
+
+.select_card-valid-month.select {
+    width: 68px;
+}
+
+.select_card-valid-year.select {
+    width: 90px;
+}
+
+.select-wrap_card-valid-month {
+    margin-right: 8px;
+}
+
+.select-wrap_card-valid-year {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.radio-group_sex {
+    margin-left: 123px;
+}
+
+.submission__item_form .input-wrap_default .label_card-cvv {
+    width: auto;
+    margin-left: 70px;
+}
+
+.input-wrap_agreement,
+.input-wrap_person-agreement {
+    vertical-align: top;
+}
+
+.submission__item_form input.yellow-btn {
+    margin-left: 0;
+}
+
+.fieldset_payment {
+    position: relative;
+}
+
+.form-cover {   /* for payment iframe */
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10001;
+}
+/********************** Form payment **********************/
+
+.submission__radio-list {
+    list-style: none;
+    margin: 26px 0 0;
+}
+
+.submission__radio-item {
+    margin-top: 20px;
+}
+
+
+.submission__radio-item:first-child {
+    margin-top: 0;
+}
+/*********************** Radio **********************/
+
+.ui-autocomplete.ui-menu {
+    z-index: 3100;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.ui-menu .ui-menu-item {
+    cursor: pointer;
+}
+/****************** auto insurance ******************/
+.fieldset__title_services {
+    color: #8A8989;
+    font-size: 16px;
+    font-family: 'pragmatica_light';
+}
+
+.fieldset_services .checkbox-wrap {
+    width: 220px;
+}
+
+.form_car-insurance .input_to-pay {
+    width: 60px;
+}
+
+.form_car-insurance .select-wrap_year .select {
+    width: 82px;
+}
+
+.form_car-insurance .input_modification {
+    width: 68px;
+}
+
+.form_car-insurance .input_capacity {
+    width: 64px;
+}
+/****************** auto insurance ******************/
+
+/************* FILELINK *************/
+.filelink__link {
+    font-size: 14px;
+    line-height: 22px;
+    color: #74a3c7;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../img/icons.png) 0 -68px no-repeat;
+    /*background: url(../img/file-icon.png) 0 0 no-repeat;*/    /* no image in project */
+    padding: 0 0 0 22px;
+}
+
+.filelink__info {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+    margin-left: 4px;
+}
+
+.checkbox-wrap + .filelink {
+    margin-top: -18px;
+}
+
+.form_car-insurance .filelink {
+    margin-left: 32px;
+}
+/************* FILELINK *************/
+
+.autocomplete-wrapper_city-search {
+    margin-top: 20px;
+}
+
+
+/************* Property detailed calculator ********************/
+.submission__item_subject-options .fieldset_radio-group {
+    display: inline-block;
+    vertical-align: top;
+    width: 312px;
+    margin-top: 29px;
+}
+
+.submission__item_subject-options .fieldset__title {
+    font-size: 21px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    font-family: 'pragmatica_light';
+}
+
+.submission__item_subject-options .radio-wrap {
+    margin: 0;
+    display: block;
+    margin-bottom: 18px;
+}
+
+.submission__item_subject-options .radio-wrap:last-child {
+    margin-bottom: 0;
+}
+
+.calculator__subject {
+    border-top: solid 1px #ccc;
+    padding: 20px 0;
+}
+
+.calculator__subject:last-child {
+    padding-bottom: 0;
+}
+
+.calculator__subject_fixed {
+    border: none;
+}
+
+.calculator__subject_fixed .label {
+    width: auto;
+    font-size: 21px;
+    line-height: 20px;
+    color: #000;
+    margin-right: 0;
+    max-width: 430px;
+}
+
+.subject-value {
+    display: block;
+    float: right;
+    font-size: 36px;
+    font-family: 'pf_highway_sans_thin';
+    color: #77808b;
+}
+
+.subject-value .rouble {
+    margin-top: -6px;
+}
+
+.submission__subtitle + .calculator__subject, .calculator__subject:first-child {
+    border: none;
+    margin-top: 9px;
+}
+
+.submission__item_subject-sliders .checkbox-wrap {
+    margin: 0;
+}
+
+.submission__item_disasters .checkbox-wrap {
+    width: 312px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.submission__item_disasters .submission__subtitle {
+    margin-bottom: 28px;
+}
+
+.submission__item_disasters .checkbox + .label {
+    width: auto;
+    max-width: 220px;
+}
+
+.submission__item_disasters .checkbox_big._checked._disabled {
+    background-position: 0 -630px;
+    cursor: default;
+    opacity: 1;
+}
+/************* Property detailed calculator ********************/
+
+.submission__icons_situations + .fieldset_range {
+
+}
+
+.submission__icons_situations + .fieldset_range .fieldset__title {
+    color: #575656;
+    font-family: 'pf_highway_sans_thin',Arial,Verdana,sans-serif;
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 29px;
+}
+
+
+/************************ Circle ********************************/
+.indicator {
+    position: relative;
+    margin: 0 auto;
+    border: none;
+    padding: 0;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    background: #e6e6e6;
+}
+
+.indicator__value {
+    background: #FFFFFF;
+    border-radius: 216px;
+    color: #F5D21E;
+    font-family: 'pf_highway_sans_thin';
+    font-size: 72px;
+    height: 121px;
+    left: 7px;
+    padding-top: 95px;
+    position: absolute;
+    text-align: center;
+    top: 7px;
+    width: 216px;
+}
+
+.submission__item-text {
+    font-size: 16px;
+    color: #222222;
+    width: 250px;
+    margin: 12px auto 0;
+    text-align: center;
+}
+
+.submission__item-wrap_discount {
+    padding-bottom: 40px;
+}
+
+/************************ Circle ********************************/
+
+.input-wrap_autocomplete.input-wrap[class*='building'] .label {
+    width: 103px;
+    margin-right: 20px;
+}
+
+.input-wrap_autocomplete.input-wrap[class*='building'] {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.input-wrap_autocomplete.input-wrap[class*='building'] .input {
+    width: 60px;
+}
+
+.input-wrap_autocomplete.input-wrap[class*='building'] .autocomplete-wrapper {
+    width: auto;
+    margin-right: 10px;
+}
+
+.input-wrap_autocomplete.input-wrap[class*='building']._invalid .autocomplete-wrapper {
+    margin-right: 0;
+}
+
+.input-wrap_autocomplete.input-wrap[class*='building']._invalid .error-icon {
+    margin: 0 4px 0 3px;
+}
+
+.checkbox-wrap_confirm {
+    margin-bottom: 0;
+}
+
+.calculator_property .input_price {
+    width: 120px;
+}
+
+.calculator_property .label_price {
+    width: auto;
+    font-size: 20px;
+    color: #000;
+}
+
+.calculator_property .input_price + .rouble {
+    font-size: 24px;
+}
+
+
+
+.submission__block_extra .calculator__subject .checkbox-wrap, .submission__block_extra .calculator__subject .checkbox + .label {
+    width: auto;
+}
+
+.slider-toggle {
+    margin: 100px 0 60px;
+}
+
+.slider__price .span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.slider__currency {
+    margin-left: 8px;
+}
+
+.calculator_travel .label_val {
+    width: auto;
+}
+
+.element-val.element-val_days {
+    font-size: 34px;
+    padding: 0;
+    vertical-align: middle;
+    width: 50px;
+    margin-left: 20px;
+}
+
+.input-wrap_slider.input-wrap_days {
+    margin-top: 30px;
+}
+
+.input-wrap_search:last-child {
+    margin-bottom: 0;
+}
+
+.label_visa-date {
+    margin-right: 7px;
+    width: auto;
+}
+
+.calculator_travel .form_form-main .txt {
+    font-size: 14px;
+    margin-bottom: 29px;
+    margin-top: -21px;
+    line-height: 16px;
+
+}
+
+.label_policy-period-value {
+    margin-right: 8px;
+}
+
+.element-val_policy-period-value {
+    padding: 0;
+    width: auto;
+    color: #8A8989;
+    vertical-align: middle;
+}
+
+/*
+.element-val-wrap + .txt {
+    margin-top: -42px;
+}*/
+
+.slider-wrap_sliderregion {
+    margin-bottom: 29px;
+}
+
+.slider-wrap_sliderregion .checkbox-wrap {
+    margin-bottom: 0;
+    width: 490px;
+    float: left;
+}
+
+
+.slider-wrap_sliderregion .insurance-region {
+    float: right;
+    margin: 0;
+}
+
+.slider-wrap_sliderregion .insurance-region__change {
+    font-size: 16px;
+}
+
+.calculator__subject:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.select-wrap_term {
+    margin-bottom: 0;
+}
+
+.input-wrap_year {
+    margin-right: 0;
+    margin-left: 8px;
+}
+
+
+.calculator_refund .input-wrap_slider.input-wrap_price {
+    margin-top: 0;
+}
+
+
+.calculator_refund .input-wrap_slider.input-wrap_price .label {
+    display: block;
+    width: auto;
+    margin-bottom: 60px;
+}
+
+.calculator_refund .label ~ .slider-wrapper {
+    width: 100%;
+}
+
+.win-popup .form_callback .label-wrap {
+    margin-right: 0;
+}
+
+.submission__item_online .select-wrap_reason .label-wrap {
+    width: auto;
+    margin: 20px 0 5px 0;
+}
+
+.submission__item_online .select-wrap_reason .select_reason {
+    width: 272px;
+}
+
+.submission__item_online .select-wrap_reason {
+    margin-bottom: 0;
+}
+
+.win-popup .form_callback .select__list-item,
+.win-popup .form_callback .select__area {
+    font-size: 16px;
+}
+/*************** Оформление путешествия *************************/
+.label-wrap .help-icon {
+    margin-right: 0;
+}
+
+.fieldset__title_insured-person {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.after-title,
+.txt_subtxt,
+.txt_passport-info,
+.txt_passport-foreign {
+    color: #8A8989;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 27px 8px;
+    vertical-align: middle;
+}
+
+.fieldset_foreign, .fieldset_russian {
+    margin-top: 29px;
+}
+
+.fieldset_passport-russian {
+    display: inline;
+    vertical-align: middle;
+}
+
+.fieldset_passport-russian > * {
+    margin: 0;
+    font-size: 18px;
+    line-height: 20px;
+    color: #8A8989;
+}
+
+.fieldset_passport-russian label {
+    color: #70A4D8;
+    text-decoration: underline;
+}
+
+.fieldset_passport-russian label:hover {
+    text-decoration: none;
+}
+
+.fieldset_passport-russian ._checked + label {
+    color: #8A8989;
+}
+
+.fieldset__title_passport-russian {
+    display: inline-block;
+    width: 420px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.fieldset_insured .fieldset__title_insured,
+.fieldset_insurer .fieldset__title_insurer {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.fieldset_insurer .after-title,
+.fieldset_insured > .after-title,
+.fieldset_insured .txt_subtxt,
+.fieldset_insurer .txt_passport-info {
+    margin-bottom: 0px;
+    vertical-align: top;
+    margin-top: 13px;
+}
+
+.calculator_flat .after-title,
+.calculator_flat .fieldset_insured .txt.txt_subtxt,
+.calculator_flat .fieldset_insurer .txt.txt_passport-info {
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+
+.calculator_flat .after-title {
+    margin-top: 0;
+}
+
+.radio-wrap_rus {
+
+}
+
+.radio-wrap_for .label_before {
+    margin: 4px 4px 0 4px;
+}
+
+input[type="email"]:disabled,
+input[type="text"]:disabled {
+    background: none;
+}
+
+.input-wrap[class*="insured-lastname"] {
+
+}
+
+.fieldset_tourists .input-wrap {
+    margin-bottom: 0;
+}
+
+.fieldset_insured-person .input-wrap[class*='foreign'] input {
+    text-transform: uppercase;
+}
+
+::-moz-placeholder {
+    text-transform: none;
+}
+
+::-webkit-input-placeholder {
+    text-transform: none;
+}
+
+input:-ms-input-placeholder {
+    text-transform: none!important;
+}
+
+.checkbox_fixed._checked._disabled {
+    background-position: 0 -630px;
+    cursor: default;
+    opacity: 1;
+}
+
+.form_car-insurance .checkbox + .label {
+    color: #8A8989;
+}
+
+.fieldset_including .label {
+    cursor: default;
+}
+
+.input-wrap_inline.input-wrap_date .label-wrap {
+    margin-right: 8px;
+}
+
+.fieldset_payment {
+    display: none;
+}
+
+.calculator_travel .fieldset_sport {
+    margin-top: 29px;
+    margin-bottom: -29px;
+}
+
+.fieldset_payment iframe {
+    border: medium none;
+    height: 200px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.ui-datepicker-title .select {
+    width: 100px;
+    margin-top: -6px;
+}
+
+.ui-datepicker-title .select:first-child {
+    margin-right: 10px;
+}
+
+.ui-datepicker-title .select .select__area {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 14px;
+}
+
+.ui-datepicker-title .select .select__list-item {
+    font-size: 14px;
+    text-align: left;
+}
+
+input[name^='FirstName'], input[name^='LastName'], input[name^='MiddleName'], input[name^='Name'] {
+    text-transform: capitalize;
+}
+
+.input-wrap_inline .form__error-wrap {
+    display: none;
+}
+
+.calculator_travel .input-wrap_days.input-wrap_slider .label {
+    width: 95px;
+}
+
+.calculator_travel .input-wrap_days .help-icon {
+    margin-right: 14px;
+}
+
+
+
+.fieldset__title_luggage, .fieldset__title_support {
+    display: inline-block;
+    margin: 0;
+}
+
+.calculator_travel .submission__block_extra .fieldset_luggage .checkbox-wrap:nth-child(2n+1), .calculator_travel .submission__block_extra .fieldset_support .checkbox-wrap:nth-child(2n+1) {
+    width: 244px;
+    margin-left: 75px;
+}
+
+.calculator_travel .submission__block_extra .fieldset_luggage .checkbox-wrap:nth-child(2n+2), .calculator_travel .submission__block_extra .fieldset_support .checkbox-wrap:nth-child(2n+2) {
+    width: 280px;
+    margin-left: 0;
+}
+
+.calculator_travel .submission__block_extra .fieldset_luggage .checkbox-wrap_luggage:nth-child(2n+2), .calculator_travel .submission__block_extra .fieldset_support .checkbox-wrap_document:nth-child(2n+2) {
+    display: block;
+    margin: -17px 0 32px 75px;
+}
+.calculator_travel:not(.calculator_flat) .submission__block_extra .fieldset_luggage .checkbox-wrap_luggage:nth-child(2n+2), 
+.calculator_travel:not(.calculator_flat) .submission__block_extra .fieldset_support .checkbox-wrap_document:nth-child(2n+2) {
+    margin-top: -8px;
+}
+
+.fieldset_luggage .checkbox-wrap_sport {
+    margin-bottom: 10px;
+}
+
+.input-wrap_yourprice {
+    margin-bottom: 0;
+}
+
+.label_yourprice {
+
+    font-size: 21px;
+    color: #000;
+}
+
+.fieldset_yourprice {
+    margin-top: 20px;
+}
+
+.input_yourprice {
+    font-size: 26px;
+    width: 70px;
+    margin-left: 24px;
+}
+
+.input-wrap_yourprice .rouble {
+    font-size: 26px;
+}
+
+.calculator__i-sum-label, .calculator__i-sum-val {
+    display: inline-block;
+}
+
+.calculator__i-sum-label {
+    color: #000000;
+    font-size: 21px;
+    margin-right: 25px;
+}
+
+.calculator__i-sum {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.calculator__i-sum-val {
+    font-size: 26px;
+}
+
+.calculator__i-sum-val .rouble {
+    margin-top: -5px;
+}
+
+.calculator_travel .fieldset_sport .radio-wrap {
+    width: 330px;
+    margin-right: 0;
+}
+
+.radio-wrap_passive .help-icon {
+    background: url(../img/best-price.png) 0 0 no-repeat;
+    width: 22px;
+    height: 22px;
+}
+
+.radio-wrap_passive .help-icon__popup {
+    padding: 8px 24px;
+    right: -50px;
+    /*text-align: center;
+    width: 80px;*/
+}
+
+.radio-wrap_passive .help-icon__popup:before {
+    right: 52px;
+}
+
+.input-wrap_inline .label-wrap_passport-number {
+    margin: 0;
+    width: 123px;
+}
+
+.label-wrap_passport-foreign {
+    width: 123px;
+    margin-right: 0px;
+}
+
+.input-wrap_passport-foreign .input__label-after {
+    margin: 15px 0 0 0;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+    ::i-block-chrome,input {
+        line-height: 0px!important;
+    }
+}
+
+.form_freestyle .fieldset_free-call-time .form__error-wrap {
+    margin-left: 123px;
+    margin-top: -30px;
+    position: static;
+}
+
+.fieldset_yourprice .select-wrap_term {
+    display: inline-block;
+    margin: 0;
+    position: absolute;
+    right: -10px;
+    top: -136px;
+}
+
+.fieldset_yourprice {
+    margin: 0;
+    position: relative;
+}
+
+.submission__subtitle_yourprice, .submission__item_your-price .submission__subtitle {
+    display: inline-block;
+    letter-spacing: -1px;
+}
+
+.fieldset_yourprice .txt_text {
+    margin-top: 36px;
+    font-size: 13px;
+}
+
+.input-wrap_yourprice {
+    margin-top: 92px;
+}
+
+.input-wrap_yourprice {
+    width: 632px;
+}
+
+.fieldset__title.fieldset__title_cover-price {
+    font-size: 24px;
+    line-height: 28px;
+    width: 336px;
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.calculator_property .fieldset__title.fieldset__title_cover-price {
+    width: 208px;
+}
+
+.fieldset_cover-price .txt_sum {
+    font-size: 34px;
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.fieldset_cover-price {
+    margin-bottom: 24px;
+}
+
+.fieldset_cover-price .rouble {
+    margin-top: -5px;
+}
+
+.form__error-wrap_countries {
+    position: static;
+}
+
+
+.input-wrap_date .form__error-wrap {
+    top: 54px;
+    bottom: 0;
+}
+
+.submission__item_online .form_callback {
+    display: none;
+}
+.promo-discount {
+    margin-top: 20px;
+    padding-top: 19px;
+    position: relative;
+}
+
+.promo-discount:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 304px;
+    border-top: 1px dotted #ccc;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.promo-discount__title {
+    padding-left: 70px;
+    position: relative;
+    height: 58px;
+}
+.promo-discount__title .blue-link_dashed {
+    font-size: 20px;
+    margin-top: 18px;
+}
+
+.promo-discount__title:before {
+    background: url(../img/discount_icon.png) no-repeat 0 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    border: 1px solid #7ca7c9;
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+}
+
+._expanded .promo-discount__title:before {
+    border-color: #77808b;
+    background-position: 0 -98px;
+}
+
+.form_discount {
+    margin-top: 16px;
+}
+
+.input-wrap_promo-code.input-wrap.input-wrap_inline {
+    margin: 0;
+}
+.input-wrap_promo-code .label {
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.input_promo-code.input_medium {
+    width: 221px;
+}
+
+.form_discount .yellow-btn {
+    margin-left: 174px;
+}
+
+.form_discount .input-wrap_inline .form__error-wrap {
+    display: block;
+    position: static;
+    width: auto;
+}
+
+.input-wrap_date {
+    position: relative;
+}
+
+/** payment iframe **/
+.payment-iframe {
+    border: none;
+    margin: 0;
+    padding: 0;
+    height: 688px;
+    width: 705px;
+}
+
+.calculator:not(.calculator_flat) .payment-iframe {
+    margin-left: -28px;
+}
+
+.form-block-overlay {
+    background: rgba(254, 254, 254, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3000;
+    top: 0;
+    left: 0;
+}
+
+.popup .form-block-overlay {
+    top: 25px;
+}
+/** finish-buy iframe **/
+.frame-layout {
+    width: 660px;
+    height: 646px;
+    background: #f9f9f9;
+    background: -webkit-linear-gradient(#f9f9f9, #f4f4f4);
+    background: -moz-linear-gradient(#f9f9f9, #f4f4f4);
+    background: -o-linear-gradient(#f9f9f9, #f4f4f4);
+    background: -ms-linear-gradient(#f9f9f9, #f4f4f4);
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/*.frame-layout .title_finish-calc-form {
+    font: 26px/30px 'pf_highway_sans_prolight', Arial, sans-serif;
+    padding-left: 47px;
+}*/
+
+.frame-layout .finish-message,
+.frame-layout .title_finish-calc-form,
+.frame-layout .message-col_left {
+    width: auto;
+    margin: 0;
+}
+
+.frame-layout .message-info_account-info,
+.frame-layout .finish-message {
+    font: 16px/24px 'pragmatica_book', Arial, sans-serif;
+}
+
+/*.frame-layout .title_finish-ok {
+    background: url(../img/finish-icons_frame.png) no-repeat 0 0px;
+}
+
+.frame-layout .title_finish-fail {
+    padding-left: 47px;
+    background: url(../img/finish-icons_frame.png) no-repeat 0 -115px;
+    margin-bottom: 28px;
+}*/
+
+
+.frame-layout .message-info_finish {
+    margin-bottom: 30px;
+}
+
+.frame-layout .message-info_account-info {
+    margin-top: 30px;
+}
+/** end finish-buy iframe **/
+.back-to-form {
+    margin-top: 20px;
+}
+/** end payment iframe **/
+
+.select._disabled {
+    background: rgba(0, 0, 0, 0);
+}
+
+.radio._disabled {
+    opacity: 0.5;
+}
+
+.submission__block_extra .fieldset__title_luggage, .submission__block_extra .fieldset__title_support {
+    text-indent: -1000px;
+    line-height: 0;
+}
+
+
+.calculator_newvzr .fieldset_sum {
+    text-align: center;
+}
+
+.calculator_newvzr .fieldset_sum .radio-wrap_100 {
+    margin-right: 0;
+}
+
+.fieldset__title_options {
+    text-align: center;
+}
+
+.select_autocomplete {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    width: 10px!important;
+    border: none;
+    background: transparent;
+    height: 52px;
+}
+
+.input-wrap_autocomplete {
+    position: relative;
+}
+
+.select_autocomplete .select__area {
+    padding: 0;
+    width: 0;
+}
+
+.select_autocomplete .select__selection {
+    width: 0;
+}
+
+.select_autocomplete .select__button {
+    margin: 0;
+    right: auto;
+    left: 0;
+    margin-top: -4px;
+}
+
+.checkbox-wrap_fixed * {
+    cursor: default !important;
+}

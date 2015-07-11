@@ -1,0 +1,66 @@
+﻿<form class="form form_callback" name="callback" ng-show="showCallbackBlock" novalidate>
+	<div class="input-wrap input-wrap_fio">
+		<span class="label-wrap label-wrap_fio">
+			<label class="label label_fio">Ваше имя</label>
+		</span>
+		<input type="text" name="name" class="input input_medium input_fio" required set-mask="c" mask-greedy="true">
+		<p class="bg-warning" ng-show="submittedcallback && callback.name.$error.required">Поле обязательно для заполнения</p>
+		<p class="bg-warning" ng-show="submittedcallback && callback.name.$error.pattern">Поле может содержать только кирилличские символы и дефис</p>
+	</div>
+	<div class="input-wrap input-wrap_phone">
+		<span class="label-wrap label-wrap_phone">
+			<label class="label label_phone">Мобильный телефон</label>
+		</span>
+		<input id="phone_popup" type="text" name="phone" class="input  input_medium input_phone" set-mask="+7 (999) 999-99-99" required>
+		<p class="bg-warning" ng-show="submittedcallback && callback.phone.$error.required">Поле обязательно для заполнения</p>
+		<p class="bg-warning" ng-show="submittedcallback && callback.phone.$error.pattern">Неправильный формат телефона</p>
+	</div>
+	<div class="input-wrap input-wrap_date input-wrap_date">
+		<span class="label-wrap label-wrap_date"><label class="label label_date">Дата звонка</label></span>
+		<span class="styled_datepicker">
+			<input id="date_popup" name="callDate" class="input input_date hasDatepicker" required set-mask="d.m.y" ng-model="callback.date" is-open="callback.callbackDpOpened" datepicker-options="dateOptions" show-button-bar="false" datepicker-popup="{{'dd.MM.yyyy'}}" min-date="today" ng-click="openDatePicker($event,'callbackDpOpened')">
+		</span>
+		<p class="bg-warning" ng-show="submittedcallback && callback.callDate.$error.date && callback.callDate.$error.parse">Введите дату правильно</p>
+		<p class="bg-warning" ng-show="submittedcallback && callback.callDate.$error.required">Поле обязательно для заполнения</p>
+		<p class="bg-warning" ng-show="submittedcallback && callback.callDate.$error.dateMinMax">Дата выходит за пределы допустимых значений</p>
+	</div>
+	<div class="fieldset fieldset_timerange fieldset_call-time">
+		<div class="fieldset__title fieldset__title_timerange fieldset__title_inline">Время звонка</div>
+		<div class="input-wrap input-wrap_inline input-wrap_timerange input-wrap_call-time">
+			<label class="label label_from" for="call-time-from">с</label>
+			<input id="call-time-from" class="input input_from input_timerange input_call-time" type="text" placeholder="часов" required set-mask="t" name="startTime" >
+		</div>
+		<div class="input-wrap input-wrap_inline input-wrap_timerange input-wrap_call-time">
+			<label class="label label_to" for="call-time-to">до</label>
+			<input id="call-time-to" class="input input_to input_timerange input_call-time" type="text" placeholder="часов" required set-mask="t" name="endTime" >
+		</div>
+		<p class="bg-warning" ng-show="submittedcallback && callback.startTime.$error.required">Поле обязательно для заполнения</p>
+		<p class="bg-warning" ng-show="submittedcallback && callback.startTime.$error.pattern">Некорректное время</p>
+		<p class="bg-warning" ng-show="submittedcallback && callback.endTime.$error.required">Поле обязательно для заполнения</p>
+		<p class="bg-warning" ng-show="submittedcallback && callback.endTime.$error.pattern">Некорректное время</p>
+	</div>
+	<div class="select-wrap select-wrap_reason" style="z-index: 100;">
+		<span class="label-wrap label-wrap_reason"><label class="label label_reason">Повод для звонка</label></span>
+		<span class="select select_Reason">
+			<select data-key="reason" name="Reason" class="_customized" style="display: none;">
+				<option value="Страховой случай" data-key="report">Страховой случай</option>
+				<option value="Статус запроса" data-key="learn">Статус запроса</option>
+				<option value="Купить страховку" data-key="buy">Купить страховку</option>
+				<option value="Обсудить условия" data-key="discuss">Обсудить условия</option>
+				<option value="Поговорить" data-key="talk" >Поговорить</option>
+			</select>
+			<div dropdown ng-init="selectedReason = 'Купить страховку'">
+				<div class="select__area dropdown-toggle" dropdown-toggle>
+					<span class="select__selection">{{selectedReason}}</span><span class="select__button"></span>
+				</div>
+				<ul class="dropdown-menu select__list" role="menu">
+					<li class="select__list-item" ng-class="{selected: selectedReason=='Страховой случай'}" ng-click="selectedReason = 'Страховой случай'">Страховой случай</li>
+					<li class="select__list-item" ng-class="{selected: selectedReason=='Статус запроса'}" ng-click="selectedReason = 'Статус запроса'">Статус запроса</li>
+					<li class="select__list-item" ng-class="{selected: selectedReason=='Купить страховку'}" ng-click="selectedReason = 'Купить страховку'">Купить страховку</li>
+					<li class="select__list-item" ng-class="{selected: selectedReason=='Обсудить условия'}" ng-click="selectedReason = 'Обсудить условия'">Обсудить условия</li>
+					<li class="select__list-item" ng-class="{selected: selectedReason=='Поговорить'}" ng-click="selectedReason = 'Поговорить'">Поговорить</li>
+				</ul>
+			</div>
+		</span>
+	</div><input type="submit" class="yellow-btn" value="Позвоните мне">
+</form>

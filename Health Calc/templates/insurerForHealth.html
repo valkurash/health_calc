@@ -1,0 +1,272 @@
+﻿<div class="policy-cost-wrap">
+	<div class="policy-cost__item"><span class="policy-cost__title">Ваш страховой полис</span> <span class="submission__sum">{{totalPolicyPrice | splitDigits}}<span class="rouble"></span></span><span class="period">{{selectedTotalSumPeriod.text}}</span></div>
+	<a scroll-on-click ng-click="changeBuyStep('calculate')" class="bill-list__text">Вернуться к расчету</a>
+</div>
+
+<form class="form form_insurer" name="insurerForm" ng-submit="submitInsurerForm(insurerForm.$valid)" novalidate scroll-on-invalid-element >
+	<div class="input-wrap  input-wrap_date input-wrap_inline input-wrap_policy-date styled_datepicker" ng-class="{'_invalid' : submittedInsurerForm && (insurerForm.insuranceStartDate.$error.required || insurerForm.insuranceStartDate.$error.invalidDate || insurerForm.insuranceStartDate.$error.minDate || insurerForm.insuranceStartDate.$error.maxDate)}">
+		<input placeholder="Дата начала действия договора" id="policy-date" type="text" name="insuranceStartDate" class="input input_date input_policy-date" required set-mask="d.m.y" ng-model="insurer.startInsureDate" min-date="insurer.startInsureDateMin" max-date="insurer.startInsureDateMax" default-date="insurer.startInsureDateMin" jquery-date-picker>
+		<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.insuranceStartDate.$error.required">
+			<div class="form__error">Поле обязательно для заполнения</div>
+		</div>
+		<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.insuranceStartDate.$error.invalidDate">
+			<div class="form__error">Некорректная дата</div>
+		</div>
+		<div class="form__error-wrap" ng-show="submittedInsurerForm && (insurerForm.insuranceStartDate.$error.minDate || insurerForm.insuranceStartDate.$error.maxDate)">
+			<div class="form__error">Дата должна быть между {{insurer.startInsureDateMin | date : 'dd.MM.yyyy'}} и {{insurer.startInsureDateMax | date : 'dd.MM.yyyy'}}</div>
+		</div>
+	</div>
+	<div class="fieldset fieldset_insurer">
+		<div class="fieldset__title fieldset__title_insurer">Страхователь</div>
+		<div class="after-title">(тот, кто оплачивает полис)</div>
+		<div class="fieldset fieldset_insurer_contact">
+			<div class="input-wrap input-wrap_inline input-wrap_phone" ng-class="{'_invalid' : submittedInsurerForm && (insurerForm.phone.$error.required || insurerForm.phone.$error.pattern)}">
+				<input placeholder="Мобильный телефон" id="phone" type="text" name="phone" class="input input_medium input_phone" set-mask="+7 (999) 999-99-99" required ng-pattern='phonePattern' ng-model="insurer.phone">
+				<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.phone.$error.required">
+					<div class="form__error">Необходимо заполнить это поле</div>
+				</div>
+				<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.phone.$error.pattern">
+					<div class="form__error">Неверный формат телефона</div>
+				</div>
+			</div>
+			<div class="input-wrap input-wrap_inline input-wrap_email" ng-class="{'_invalid' : submittedInsurerForm && (insurerForm.email.$error.required || insurerForm.email.$error.pattern)}">
+				<input placeholder="E-mail" id="email" type="text" name="email" class="input input_medium input_email" required ng-pattern="emailPattern" ng-model="insurer.email">
+				<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.email.$error.required">
+					<div class="form__error">Необходимо заполнить это поле</div>
+				</div>
+				<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.email.$error.pattern">
+					<div class="form__error">Некорректно указан email</div>
+				</div>
+			</div>
+			<div class="input-wrap input-wrap_lastname" ng-class="{'_invalid' : submittedInsurerForm && insurerForm.lastname.$error.required}">
+				<input placeholder="Фамилия" ng-change="includeInsurerField('lastname')" id="lastname" type="text" name="lastname" class="input input_lastname" required set-mask="c" mask-greedy="true" ng-model="insurer.lastname">
+				<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.lastname.$error.required">
+					<div class="form__error">Необходимо заполнить это поле</div>
+				</div>
+				<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.lastname.$error.pattern">
+					<div class="form__error">Поле может содержать только кирилличские символы и дефис</div>
+				</div>
+			</div>
+			<div class="input-wrap input-wrap_firstname" ng-class="{'_invalid' : submittedInsurerForm && insurerForm.firstname.$error.required}">
+				<input placeholder="Имя" ng-change="includeInsurerField('firstname')" id="firstname" type="text" name="firstname" class="input input_firstname" required set-mask="c" mask-greedy="true" ng-model="insurer.firstname">
+				<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.firstname.$error.required">
+					<div class="form__error">Необходимо заполнить это поле</div>
+				</div>
+				<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.firstname.$error.pattern">
+					<div class="form__error">Поле может содержать только кирилличские символы и дефис</div>
+				</div>
+			</div>
+			<div class="input-wrap input-wrap_patronymic" ng-class="{'_invalid' : submittedInsurerForm && insurerForm.patronymic.$error.required}">
+				<input placeholder="Отчество" ng-change="includeInsurerField('patronymic')" id="patronymic" type="text" name="patronymic" class="input input_patronymic" set-mask="c" mask-greedy="true" ng-model="insurer.patronymic">
+				<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.patronymic.$error.pattern">
+					<div class="form__error">Поле может содержать только кирилличские символы и дефис</div>
+				</div>
+			</div>
+			<div class="fieldset fieldset_radio-group fieldset_sex">
+				<div class="fieldset__title fieldset__title_sex fieldset__title_inline">Пол</div>
+				<div class="radios-wrap">
+					<div ng-repeat="gender in genders" class="radio-wrap radio-wrap_default" ng-class="{'_checked' : insurer.gender == gender.value}">
+						<label for="{{gender.key}}">
+							<span class="radio" ng-class="'radio_'+ sport.key" radio>
+								<span class="checked_radio">
+									<input type="radio" id="{{gender.key}}" name="gender" ng-model="insurer.gender" ng-value="gender.value">
+								</span>
+							</span><span>{{gender.title}}</span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="input-wrap input-wrap_date input-wrap_birth-date styled_datepicker" ng-class="{'_invalid' : submittedInsurerForm && (insurerForm.birthdate.$error.required || insurerForm.birthdate.$error.invalidDate||insurerForm.birthdate.$error.minDate||insurerForm.birthdate.$error.maxDate)}">
+				<input placeholder="Дата рождения" ng-change="includeInsurerField('birthday')" id="birth-date" type="text" name="birthdate" class="input input_date input_birth-date" min-date="insurer.birthdayMin" max-date="insurer.birthdayMax" default-date="insurer.birthdayMax" required set-mask="d.m.y" ng-model="insurer.birthday" jquery-date-picker check-field="dateIssue">
+				<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.birthdate.$error.required">
+					<div class="form__error">Поле обязательно для заполнения</div>
+				</div>
+				<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.birthdate.$error.invalidDate">
+					<div class="form__error">Некорректная дата</div>
+				</div>
+				<div class="form__error-wrap" ng-show="submittedInsurerForm && (insurerForm.birthdate.$error.minDate || insurerForm.birthdate.$error.maxDate)">
+					<div class="form__error">Дата должна быть между {{insurer.birthdayMin | date : 'dd.MM.yyyy'}} и {{insurer.birthdayMax | date : 'dd.MM.yyyy'}}</div>
+				</div>
+			</div>
+
+			<div data-fieldname="Passports" class="fieldset fieldset_document">
+				<div class="input-wrap input-wrap_inline input-wrap_passport-number" ng-class="{'_invalid' : submittedInsurerForm && (insurerForm.passportFullNumber.$error.required || insurerForm.passportFullNumber.$error.pattern)}">
+					<input placeholder="Серия и номер паспорта" id="passport-number" type="text" name="passportFullNumber" class="input  input_medium input_passport-number" set-mask="99 99 999999" ng-pattern="passportPattern" required ng-model="insurer.passportNumber">
+					<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.passportFullNumber.$error.required">
+						<div class="form__error">Поле обязательно для заполнения</div>
+					</div>
+					<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.passportFullNumber.$error.pattern">
+						<div class="form__error">Неверный формат серии и номера паспорта</div>
+					</div>
+				</div>
+				<div class="input-wrap input-wrap_inline input-wrap_date input-wrap_passport-recieved-date styled_datepicker" ng-class="{'_invalid' : submittedInsurerForm && (insurerForm.dateIssue.$error.required || insurerForm.dateIssue.$error.invalidDate || insurerForm.dateIssue.$error.minDate|| insurerForm.dateIssue.$error.maxDate)}">
+					<input placeholder="Дата выдачи" id="passport-recieved-date" type="text" name="dateIssue" class="input input_date input_passport-recieved-date " min-date="insurer.dateIssueMin" max-date="insurer.dateIssueMax" required set-mask="d.m.y" ng-model="insurer.dateIssue" default-date="insurer.dateIssueMax" jquery-date-picker >
+					<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.dateIssue.$error.required">
+						<div class="form__error">Поле обязательно для заполнения</div>
+					</div>
+					<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.dateIssue.$error.invalidDate">
+						<div class="form__error">Некорректная дата</div>
+					</div>
+					<div class="form__error-wrap" ng-show="submittedInsurerForm && (insurerForm.dateIssue.$error.minDate || insurerForm.dateIssue.$error.maxDate)">
+						<div class="form__error">Дата должна быть между {{insurer.dateIssueMin | date : 'dd.MM.yyyy'}} и {{insurer.dateIssueMax | date : 'dd.MM.yyyy'}}</div>
+					</div>
+				</div>
+				<div class="textarea-wrap textarea-wrap_passport-issued" ng-class="{'_invalid' : submittedInsurerForm && insurerForm.issuedBy.$error.required}">
+					<div class="textarea-wrapper">
+						<textarea placeholder="Паспорт выдан" class="textarea textarea_passport-issued" name="issuedBy" required ng-model="insurer.passportIssued"></textarea>
+						<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.issuedBy.$error.required">
+							<div class="form__error">Поле обязательно для заполнения</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fieldset fieldset_registration">
+				<div class="fieldset__title fieldset__title_registration">Адрес регистрации</div>
+				<div class="fieldset fieldset_registration-address fieldset_address-group _address">
+					<div class="input-wrap input-wrap_autocomplete input-wrap_registration-city" ng-class="{'_invalid' : submittedInsurerForm && insurerForm.regCity.$error.required}">
+						<div class="autocomplete-wrapper">
+							<input id="registration-city" autocomplete="city" placeholder="Введите город или населённый пункт" type="text" ng-model="insurer.regAddress.city" name="regCity" class="input input_autocomplete input_registration-city _autocomplete ui-autocomplete-input" required>
+						</div>
+						<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.regCity.$error.required">
+							<div class="form__error">Поле обязательно для заполнения</div>
+						</div>
+					</div>
+					<div class="input-wrap input-wrap_autocomplete input-wrap_registration-street">
+						<div class="autocomplete-wrapper">
+							<input id="registration-street" autocomplete="street" placeholder="Укажите название улицы" type="text" ng-model="insurer.regAddress.street" name="regStreet" class="input input_autocomplete input_registration-street _autocomplete ui-autocomplete-input">
+						</div>
+					</div>
+					<div class="input-wrap input-wrap_autocomplete input-wrap_inline input-wrap_registration-building" ng-class="{'_invalid' : submittedInsurerForm && insurerForm.regHouse.$error.required}">
+						<span class="label-wrap label-wrap_registration-building"><label class="label label_registration-building">Дом</label></span>
+						<div class="autocomplete-wrapper">
+							<input id="registration-building" placeholder="" type="text" ng-model="insurer.regAddress.house" name="regHouse" required class="input input_autocomplete input_registration-building _autocomplete ui-autocomplete-input">
+							<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.regHouse.$error.required">
+								<div class="form__error">Поле обязательно для заполнения</div>
+							</div>
+						</div>
+					</div>
+					<div class="input-wrap input-wrap_inline input-wrap_inline input-wrap_registration-flat">
+						<span class="label-wrap label-wrap_registration-flat"><label class="label label_registration-flat">Квартира</label></span>
+						<input id="registration-flat" type="text" class="input  input_tiny input_registration-flat" ng-model="insurer.regAddress.flat" name="regFlat">
+					</div>
+				</div>
+				<div class="checkbox-wrap checkbox-wrap_default" ng-class="{'_checked' : insurer.sameAddress}">
+					<label for="residence-as-registration">
+						<span class="checkbox checkbox-wrap_residence-as-registration checkbox-wrap_default">
+							<input ng-change="includeResidence()" type="checkbox" id="residence-as-registration" ng-model="insurer.sameAddress">
+						</span>Адрес регистрации совпадает с местом проживания
+					</label>
+				</div>
+			</div>
+			<div class="fieldset fieldset_residence" ng-hide="insurer.sameAddress">
+				<div class="fieldset__title fieldset__title_residence">Место фактического проживания</div>
+				<div class="fieldset fieldset_residence-address fieldset_address-group _address">
+					<div class="input-wrap input-wrap_autocomplete input-wrap_residence-city" ng-class="{'_invalid' : !insurer.sameAddress && submittedInsurerForm && insurerForm.resCity.$error.required}">
+						<div class="autocomplete-wrapper">
+							<input id="residence-city" autocomplete="city" placeholder="Введите город или населённый пункт" type="text" ng-model="insurer.resAddress.city" name="resCity" class="input input_autocomplete input_residence-city _autocomplete ui-autocomplete-input" ng-required="!insurer.sameAddress">
+						</div>
+						<div class="form__error-wrap" ng-show="!insurer.sameAddress && submittedInsurerForm && insurerForm.resCity.$error.required">
+							<div class="form__error">Поле обязательно для заполнения</div>
+						</div>
+					</div>
+					<div class="input-wrap input-wrap_autocomplete input-wrap_residence-street">
+						<div class="autocomplete-wrapper">
+							<input id="residence-street" autocomplete="street" placeholder="Укажите название улицы" type="text" ng-model="insurer.resAddress.street" name="resStreet" class="input input_autocomplete input_residence-street _autocomplete ui-autocomplete-input">
+						</div>
+					</div>
+					<div class="input-wrap input-wrap_autocomplete input-wrap_inline input-wrap_residence-building" ng-class="{'_invalid' : !insurer.sameAddress && submittedInsurerForm && insurerForm.resHouse.$error.required}">
+						<span class="label-wrap label-wrap_residence-building"><label class="label label_residence-building">Дом</label></span>
+						<div class="autocomplete-wrapper">
+							<input id="residence-building" type="text" ng-model="insurer.resAddress.house" name="resHouse" ng-required="!insurer.sameAddress" class="input input_autocomplete input_residence-building _autocomplete ui-autocomplete-input">
+							<div class="form__error-wrap" ng-show="!insurer.sameAddress && submittedInsurerForm && insurerForm.resHouse.$error.required">
+								<div class="form__error">Поле обязательно для заполнения</div>
+							</div>
+						</div>
+					</div>
+					<div class="input-wrap input-wrap_inline input-wrap_residence-flat">
+						<span class="label-wrap label-wrap_residence-flat"><label class="label label_residence-flat">Квартира</label></span>
+						<input id="residence-flat" type="text" class="input  input_tiny input_residence-flat" ng-model="insurer.resAddress.flat" name="resFlat">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="fieldset fieldset_insured">
+		<div class="fieldset__title fieldset__title_insured">Застрахованные</div>
+		<div class="fieldset fieldset_insured-persons">
+			<div class="checkbox-wrap checkbox-wrap_default" ng-class="{'_checked' : insurer.includeSelf}">
+				<label for="include-insurer">
+					<span class="checkbox checkbox-wrap_include-insurer checkbox-wrap_default">
+						<input type="checkbox" id="include-insurer" ng-model="insurer.includeSelf" ng-change="includeInsurer()">
+					</span>Включить страхователя в список застрахованных
+				</label>
+			</div>
+			<div class="fieldset fieldset_insured-person" ng-repeat="person in insuredPerson">
+				<ng-form name="personForm">
+					<div class="fieldset__title fieldset__title_insured-person">{{person.title}}</div>
+					<div class="fieldset fieldset_contact">
+						<div class="input-wrap input-wrap_lastnameInsured" ng-class="{'_invalid' : submittedInsurerForm && personForm.lastnameInsured.$error.required}">
+							<input placeholder="Фамилия" type="text" name="lastnameInsured" class="input input_lastnameInsured" required set-mask="c" mask-greedy="true" ng-model="person.lastname">
+							<div class="form__error-wrap" ng-show="submittedInsurerForm && personForm.lastnameInsured.$error.required">
+								<div class="form__error">Необходимо заполнить это поле</div>
+							</div>
+							<div class="form__error-wrap" ng-show="submittedInsurerForm && personForm.lastnameInsured.$error.pattern">
+								<div class="form__error">Поле может содержать только кирилличские символы и дефис</div>
+							</div>
+						</div>
+						<div class="input-wrap input-wrap_firstnameInsured" ng-class="{'_invalid' : submittedInsurerForm && personForm.firstnameInsured.$error.required}">
+							<input placeholder="Имя" type="text" name="firstnameInsured" class="input input_firstnameInsured" required set-mask="c" mask-greedy="true" ng-model="person.firstname">
+							<div class="form__error-wrap" ng-show="submittedInsurerForm &&  personForm.firstnameInsured.$error.required">
+								<div class="form__error">Необходимо заполнить это поле</div>
+							</div>
+							<div class="form__error-wrap" ng-show="submittedInsurerForm && personForm.firstnameInsured.$error.pattern">
+								<div class="form__error">Поле может содержать только кирилличские символы и дефис</div>
+							</div>
+						</div>
+						<div class="input-wrap input-wrap_patronymicInsured" ng-class="{'_invalid' : submittedInsurerForm && personForm.patronymicInsured.$error.required}">
+							<input placeholder="Отчество" type="text" name="patronymicInsured" class="input input_patronymicInsured" set-mask="c" mask-greedy="true" ng-model="person.patronymic">
+							<div class="form__error-wrap" ng-show="submittedInsurerForm &&  personForm.patronymicInsured.$error.pattern">
+								<div class="form__error">Поле может содержать только кирилличские символы и дефис</div>
+							</div>
+						</div>
+						<div class="input-wrap input-wrap_date input-wrap_birth-date styled_datepicker" ng-class="{'_invalid' : submittedInsurerForm && (personForm.insuredBirthdate.$error.required || personForm.insuredBirthdate.$error.invalidDate||personForm.insuredBirthdate.$error.minDate||personForm.insuredBirthdate.$error.maxDate)}">
+							<input placeholder="Дата рождения" ident="'insuredBirthdate_'+ $index " type="text" name="insuredBirthdate" class="input input_date input_birth-date" min-date="person.birthdayMin" max-date="person.birthdayMax" required set-mask="d.m.y" ng-model="person.birthday" default-date="person.birthdayMax" jquery-date-picker>
+							<div class="form__error-wrap" ng-show="submittedInsurerForm && personForm.insuredBirthdate.$error.required">
+								<div class="form__error">Поле обязательно для заполнения</div>
+							</div>
+							<div class="form__error-wrap" ng-show="submittedInsurerForm && personForm.insuredBirthdate.$error.invalidDate">
+								<div class="form__error">Некорректная дата</div>
+							</div>
+							<div class="form__error-wrap" ng-show="submittedInsurerForm && (personForm.insuredBirthdate.$error.minDate || personForm.insuredBirthdate.$error.maxDate)">
+								<div class="form__error">Дата должна быть между {{person.birthdayMin | date : 'dd.MM.yyyy'}} и {{person.birthdayMax | date : 'dd.MM.yyyy'}}</div>
+							</div>
+						</div>
+					</div>
+				</ng-form>
+			</div>
+		</div>
+	</div>
+	<div class="fieldset fieldset_agreement">
+		<div class="checkbox-wrap checkbox-wrap_default checkbox-wrap_agreement" ng-class="{'_checked' : insurer.agreement}">
+			<label for="agreement" class="label_agreement">
+				<span class="checkbox checkbox-wrap_default">
+					<input type="checkbox" name="agreement" id="agreement" ng-model="insurer.agreement" required>
+				</span>Я подтверждаю, что мне предоставлена вся необходимая информация<br /> об условиях страхования, что я ознакомлен(на) и согласен(на) с <a href="https://www.tinkoffinsurance.ru/strahovanie-zhizni/~/media/Files/documents/NS-140620.ashx" target="_blank">Правилами страхования</a>. Настоящим даю <a href="https://www.tinkoffinsurance.ru/~/media/Files/agreement_personal_info.ashx" target="_blank">согласие на обработку моих персональных данных</a>
+			</label>
+		</div>
+		<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.agreement.$error.required">
+			<div class="form__error">Для продолжения необходимо ваше согласие с данным пунктом</div>
+		</div>
+		<div class="checkbox-wrap checkbox-wrap_default checkbox-wrap_monthly" ng-class="{'_checked' : insurer.monthly}">
+			<label for="monthly" class="label_monthly">
+				<span class="checkbox checkbox-wrap_default">
+					<input type="checkbox" id="monthly" name="monthly" ng-model="insurer.monthly" required>
+				</span>Я соглашаюсь на ежемесячное автоматическое списание денежных средств<br /> с моей банковской карты в размере страховой премии по полису
+			</label>
+		</div>
+		<div class="form__error-wrap" ng-show="submittedInsurerForm && insurerForm.monthly.$error.required">
+			<div class="form__error">Для продолжения необходимо ваше согласие с данным пунктом</div>
+		</div>
+	</div>
+	<input type="submit" class="yellow-btn" value="Оплатить">
+</form>
