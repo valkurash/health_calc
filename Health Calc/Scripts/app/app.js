@@ -6,10 +6,7 @@ appRoot
     .config(['$routeProvider', function ($routeProvider) {
         //Setup routes to load partial templates from server. TemplateUrl is the location for the server view (Razor .cshtml view)
         $routeProvider
-            .when('/healthCalculator', { templateUrl: '/home/healthCalc', controller: 'HealthController' })
-            /*.when('/about', { templateUrl: '/home/about', controller: 'AboutController' })
-            .when('/demo', { templateUrl: '/home/demo', controller: 'DemoController' })
-            .when('/angular', { templateUrl: '/home/angular' })*/
+            .when('/healthCalculator', { templateUrl: 'templates/healthCalc', controller: 'HealthController' })
             .otherwise({ redirectTo: '/healthCalculator' });//under question on integration
     }])
     .controller('RootController', ['$scope', '$route', '$routeParams', '$location', function ($scope, $route, $routeParams, $location) {
@@ -28,9 +25,9 @@ appRoot
         		$scope.insurancesPopup = false;
         		$scope.healthPopup = false;
 	        }
-        	
+
         };
-        
+
     }]);
 
 appRoot.run(function ($rootScope) {
